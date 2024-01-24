@@ -1,0 +1,33 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #fff;
+    height: 500px;
+
+}
+.card h3{
+    font-size: 1.6rem;
+    text-align: center;
+}
+.card img{
+    width: 240px;
+    height: 200px;
+    object-fit: cover;
+}
+.list-tools {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.list-tools li {
+    padding: 0.8rem 1rem;
+    background-color: rgb(255, 255, 255, 0.2);
+    border: 1px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+}
