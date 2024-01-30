@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style.css"
-import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export const Navbar = () => {
@@ -20,21 +19,18 @@ export const Navbar = () => {
 
     return (
         <header className={color ? "header header-bg" : "header"}>
-            <Link to="/">
+            <a href="/">
                 <h1>Mon portfolio .</h1>
-            </Link>
+            </a>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-                <li>
-                    <NavLink to='/'>Accueil</NavLink>
+                <li onClick={handleClick}>
+                    <a href="#accueil">Accueil</a>
                 </li>
-                <li>
-                    <NavLink to='/projet'>Mes projets</NavLink>
+                <li onClick={handleClick}>
+                    <a href="#projet">Mes projets</a>
                 </li>
-                <li>
-                    <NavLink to='/about'>A propos</NavLink>
-                </li>
-                <li>
-                    <NavLink to='/contact'>Contact</NavLink>
+                <li onClick={handleClick}>
+                    <a href="#about">A propos</a>
                 </li>
             </ul>
             <div className="hamburger" onClick={handleClick}>

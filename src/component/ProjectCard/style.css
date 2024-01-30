@@ -1,21 +1,58 @@
+.card-container {
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.card-container .background-card{
+    width: 100%;
+    height: 370px;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    border-radius: 35px;
+    object-fit: cover;
+}
+
 .card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
-    border: 1px solid #fff;
-    height: 500px;
+    gap: 10px;
+    padding: 0 13px;
+    width: 100%;
+    position: absolute;
+    top: 30px;
+    transform: translateY(0);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+.card:hover {
+    transform: translateY(-5px);
 
+}
+
+.card-heading {
+    width: 100%;
+    height: 60px;
 }
 .card h3{
     font-size: 1.6rem;
     text-align: center;
+    text-shadow: 2px 2px 4px #000000;
 }
-.card img{
-    width: 240px;
-    height: 200px;
+
+.card-image img{
+    width: 171px;
+    height: 171px;
+    border-radius: 100px;
     object-fit: cover;
+    box-shadow: 5px 10px 18px #282828
+}
+
+.card-footer {
+    display: flex;
+    gap: 13px;
 }
 .list-tools {
     display: flex;
@@ -25,9 +62,45 @@
     justify-content: center;
 }
 .list-tools li {
-    padding: 0.8rem 1rem;
-    background-color: rgb(255, 255, 255, 0.2);
-    border: 1px solid #fff;
+    padding: 0.4rem 0.5rem;
+    background-color: rgb(71, 71, 71, 0.5);
+    border: 1px solid #EAEAEA;
     border-radius: 20px;
-    color: #fff;
+    color: #EAEAEA;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    box-shadow: 5px 10px 18px #282828
+}
+.action-btn {
+    padding: 5px 10px;
+    margin: 0 10px;
+    color: #EAEAEA;
+    transform: scale(1);
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0,0,.2,1);
+}
+.action-btn:hover {
+    transform: scale(1.2);
+}
+.actionBtn{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 10px;
+    right: 15px;
+    gap: 14px;
+}
+.actionBtn.active{
+    bottom: 90px;
+}
+.action-btn.active{
+    border-radius: 50%;
+    background-color: #08D9D6;
+}
+
+.action-btn-floating {
+    bottom:10px;
+    display: none;
 }

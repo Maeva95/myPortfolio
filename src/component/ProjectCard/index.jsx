@@ -1,27 +1,75 @@
-import { Link } from 'react-router-dom'
 import './style.css'
 import React from 'react'
-// import Projects from 'src/data/project.json'
-// import FetchData from '../../fetchData'
+import { useEffect, useState } from 'react'
+import ModalCard from '../ModalCard'
+import { FaPlusCircle, FaList, FaGlobe, FaGithub } from 'react-icons/fa'
 
-export default function ProjectCard ({ id, title, image, tools}) {
-  // const url = 'src/data/project.json'
-  // const projects = FetchData(url)
-  // const getProjectById = projects.dataLog.find((item) => item.id === id)
+export default function ProjectCard ({title, image, description, objectifs, tools, urlWebsite, source}) {
+  const [ data, setData ] = useState([])
+  const [openModal, setOpenModal] = useState(false)
+  
+  const [click, setClick] = useState(false)
+  const handleClick = () => setClick(!click)
+
+  useEffect(() => {
+    async function getData () {
+      const response = await fetch('/data/tools.json')
+      const data = await response.json()
+      setData(data)
+    }
+    getData()
+  }, [])
+
 
   return (
-    <div className='card'>
-      <h3>- {title} -</h3>
-      <img src={image} alt={title} />
-      <ul className='list-tools'>
-        {tools.map((tool, index) => 
-        <li key={index}>
-          {tool}
-        </li>
-        )}
-      </ul>
-      <Link to={'/projet/' + id} className='btn'>Voir le projet</Link>
-    </div>
+    <li className='card-container'>
+      <img className='background-card'src={image} alt={title} />
+      <div className='card'>
+        <div className='card-heading'>
+          <h3>{title}</h3>
+        </div>
+        <div className='card-image'>
+          <img src={image} alt={title} />
+        </div>
+        <div className='card-footer'>
+          <ul className='list-tools'>
+            {data && 
+              tools.map((tool, index) => 
+                <li key={index}>
+                  {tool}
+                </li>
+              )}
+          </ul>
+          <div>
+            <FaPlusCircle className='action-btn' size={60} onClick={handleClick}/>
+              <div className={click ? 'actionBtn active' : 'actionBtn'}>
+                <FaList className={click ? 'action-btn active' : 'action-btn-floating'} size={42} onClick={() =>
+                  {setOpenModal(true)}}
+                />
+                <a href={urlWebsite}>
+                  <FaGlobe className={click ? 'action-btn active' : 'action-btn-floating'} size={42} />
+                </a>
+                <a href={source}>
+                  <FaGithub className={click ? 'action-btn active' : 'action-btn-floating'} size={42} />
+                </a>
+              </div>
+          </div>
+          
+        </div>
+      </div>
+      { openModal && 
+          <ModalCard
+            title={title}
+            image={image}
+            detail={description}
+            objectifs={objectifs}
+            urlWebsite={urlWebsite}
+            source={source}
+            tools={tools}
+            closeModal={setOpenModal}
+          />
+        }
+    </li>
   )
 }
 

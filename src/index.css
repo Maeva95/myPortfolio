@@ -5,6 +5,8 @@
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+
 }
 
 body {
@@ -14,6 +16,12 @@ body {
 h1, h2, h3, h4, p, a {
   color: white;
   text-decoration: none;
+}
+h2 {
+  font-size: 3rem;
+}
+h3 {
+  font-size: 2rem;
 }
 
 ul {
@@ -39,30 +47,57 @@ ul {
   background: transparent;
   color: #fff;
 }
-.project-card {
+.project {
   width: 100%;
-  padding: 6rem 7rem;
+  padding: 7rem 7rem;
   background: #000;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
+  z-index: 3
 }
-.card-container {
-  width: 100%;
-  align-items: center;
-  padding: 1rem;
-  
+.parcours{
+  color: #fff;
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+}
 
+.experience {
+  display: flex;
+  gap: 160px;
+  align-items: center;
+  height: auto;
+}
+.experience-2 {
+  flex-direction: row-reverse;
+}
+
+.experience .image img{
+  background-color: #fff;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 295px;
+  height: 295px;
+}
+
+.experience .content{
+  height: 330px;
+  padding: 50px;
+}
+.experience .content p{
+  font-size: 1rem;
 }
 
 @media screen and (max-width: 1040px) {
-  .project-card {
+  .project {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 640px) {
-  .project-card {
+  .project {
     grid-template-columns: repeat(1, 1fr);
   }
 }

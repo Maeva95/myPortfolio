@@ -1,0 +1,110 @@
+[
+    {
+        "id": 1,
+        "title": "Agence immobilière KASA",
+        "image": "/assets/mockup-kasa.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Projet_8-Agence_immo_web_Kasa/",
+        "source": "https://github.com/Maeva95/Projet_8-Agence_immo_web_Kasa"
+    },
+    {
+        "id": 2,
+        "title": "Portfolio Sophie Bluel",
+        "image": "/assets/mockup-sophie-bluel.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
+        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+    },
+    {
+        "id": 3,
+        "title": "Photgraphe Nina Carducci",
+        "image": "/assets/mockup-nina-carducci.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
+        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+    },
+    {
+        "id": 4,
+        "title": "Agence immobilière KASA",
+        "image": "/assets/mockup-kasa.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Projet_8-Agence_immo_web_Kasa/",
+        "source": "https://github.com/Maeva95/Projet_8-Agence_immo_web_Kasa"
+    },
+    {
+        "id": 5,
+        "title": "Portfolio Sophie Bluel",
+        "image": "/assets/mockup-sophie-bluel.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
+        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+    },
+    {
+        "id": 6,
+        "title": "Photgraphe Nina Carducci",
+        "image": "/assets/mockup-nina-carducci.png",
+        "tools": [
+            "ViteJS",
+            "HTML",
+            "SCSS",
+            "React Router"
+        ],
+        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "objectifs": [
+            "Développer l’ensemble de l’application avec React",
+            "Intégrer les composants React et les routes avec React Router"
+        ],
+        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
+        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+    }
+]
