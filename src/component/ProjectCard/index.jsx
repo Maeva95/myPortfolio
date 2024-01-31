@@ -86,7 +86,6 @@ export default function ProjectCard ({title, image, description, objectifs, tool
             objectifs={objectifs}
             urlWebsite={urlWebsite}
             source={source}
-            tools={tools}
             closeModal={setOpenModal}
           />
         }

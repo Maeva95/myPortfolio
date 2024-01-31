@@ -1,7 +1,6 @@
 .modalBg {
-  width: 100vw;
-  height: 100vh;
-  padding: 10vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(37, 37, 37, 0.90);
   position: fixed;
   display: flex;
@@ -12,108 +11,111 @@
   z-index: 50;
 }
 .modalContainer {
-    width: 600px;
-    height: 760px;
-    border-radius: 12px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    display: flex;
-    flex-direction: column;
-    padding: 25px;
-    gap: 25px;
-    z-index: 50;
-  }
+  width: 448px;
+  height: 565px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 50;
+}
   
-  .modalContainer .title {
-    display: inline-block;
-    text-align: center;
-    margin-top: 10px;
-  }
-  
-  .modal-closeBtn {
-    display: flex;
-    justify-content: flex-end;
-    
-  }
-  
-  .modalContainer .work-img{
-    width: 100%;
-    object-fit: cover;
-  }
-  .modalContainer .work-content {
-    flex: 50% 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.7rem;
-    text-align: center;
-    gap: 19px;
-  }
+.modal-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px;
+  padding: 30px 30px 0 30px;
+}
+.modal-heading h2{
+  color: #000;
+  font-size: 1.6rem;
+  content: "";
+  background: #000;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .modalContainer hr{
-    border: 1px solid rgb(248, 217, 15);;
-    border-radius: 3px;
-    width: 50%;
-  }
-  .modalContainer .work-section {
-    flex: 20% 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 10px;
-  }
-  .modalContainer h2{
-    color: #000;
-    font-size: 1.8rem;
-  }
-  .work-section ul {
-    display: grid;
-  }
-  .detail li, .objective li{
-    font-size: 1rem;
-    display: grid;
-    grid-template-columns: 20px 1fr;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
+.modalContainer .modal-image{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
 }
-  
-  .work-section h3{
-    color: #000;
-    font-size: 1.4rem;
-  }
-  .modalContainer p{
-    color: #000;
-    font-size: 1rem;
-  }
-  
-  .tools .list-tools {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
+.modalContainer .modal-content {
+  flex: 50% 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  text-align: center;
+  gap: 19px;
+  padding: 0 40px;
 }
-  .tools .list-tools li {
-    padding: 0.8rem 1rem;
-    background-color: rgba(71, 71, 71, 0.555);
-    border: 1px solid #000;
-    border-radius: 20px;
-    font-size: 1rem;
-    color: #000;
+
+.modal-content .work-section {
+  flex: 20% 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
 }
-  .modalContainer .work-links {
-    display: flex;
-    gap: 60px;
-  }
-  .modalContainer .work-links .btn-modal{
-    padding: 12px 32px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    background: rgb(248, 217, 15);
-    color: #222;
-    border: 1px solid #fff;
-    cursor: pointer;
-  }
+.work-section h3{
+  color: #000;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.work-section ul {
+  display: grid;
+}
+.work-section ul > li{
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.work-section p{
+  color: #000;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  margin: 5px;
+}
+
+.work-section .detail, .work-section .objective{
+  text-align: start;
+}
+
+.modalContainer .work-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  border-top: 1px solid #000;
+}
+.modalContainer .work-links > li {
+  padding: 20px;
+  text-align: center;
+}
+.modalContainer .work-links .btn-modal{
+  padding: 12px 32px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #222;
+  cursor: pointer;
+}
+.modalContainer .work-links .link-right{
+  border-right: 1px solid #000;
+  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  border-bottom-right-radius: 10px;
+}
+.modalContainer .work-links .link-left{
+  border-left: 1px solid #000;
+  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  border-bottom-left-radius: 10px;
+}

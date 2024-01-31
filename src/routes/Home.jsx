@@ -13,11 +13,11 @@ const Home = () => {
         <section id='accueil'>
           <HeroImage />
         </section>
-        <section className='section-projet' id='projet'>
-          <Projet/>
-        </section>
         <section className='section-about' id='about'>
           <About/>
+        </section>
+        <section className='section-projet' id='projet'>
+          <Projet/>
         </section>
       </main>
     <Footer/>
