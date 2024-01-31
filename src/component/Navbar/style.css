@@ -24,9 +24,17 @@ header {
 }
 
 .nav-menu li a{
-    font-size: 1.2 rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transform: translateX(-50%);
+}
+.nav-menu li a:hover {
+    content: "";
+    background: rgb(131,58,180);
+    background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .hamburger {

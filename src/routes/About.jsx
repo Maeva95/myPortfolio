@@ -2,7 +2,6 @@ import React from 'react'
 import HeroImage2 from '../component/HeroImg2'
 import IconInfo from '../assets/images/informatik.svg'
 import IconForm from '../assets/images/formation.svg'
-import IconShop from '../assets/images/shopping.svg'
 import BgImage from '../assets/images/work-table.jpg'
 const About = () => {
   return (
@@ -13,34 +12,6 @@ const About = () => {
         text="Nous avons tous une histoire à raconter et voici la mienne..."
       />
       <div className='parcours'>
-        <div className='experience experience-1'>
-          <div className='image'>
-            <img src={IconShop} alt="" />
-          </div>
-          <div className='content'>
-            <h3>Mes débuts</h3>
-            <p>
-                Depuis mon plus jeune âge, j'ai toujours eu un attrait pour la créativité et le souci du détail.
-                Mon brevet technique Vêtement et création en poche, j'ai voulu très tôt travailler dans le Prêt-à-porter.
-                J'ai commencé comme vendeuse, en boutique, en grands-magasins où j'ai appris à être à l'écoute de mes clients et à travailler en équipe.
-                Je conseillais les clients et les orienter dans leurs choix. 
-            </p>
-          </div>
-        </div>
-        <div className='experience experience-2'>
-          <div className='image'>
-            <img src={IconInfo} alt="" />
-          </div>
-          <div className='content'>
-            <h3>Mon premier sprint</h3>
-            <p>
-              Après plusieurs années dans la vente de Prêt-à-Porter, et souhaitant évoluer vers un autre domaine,
-              J'ai entrepris une formation d'assistante commerciale option web. A l'obtention mon diplôme, j'ai travaillé au sein même du centre de formation
-              qui cherchait à développer ses formations auprès d'entreprises.
-              Mais je voulais travailler dans un secteur dans lequel je pouvais m'épanouir.
-            </p>
-          </div>
-        </div>
         <div className='experience experience-1'>
           <div className='image'>
             <img src={IconInfo} alt="" />
@@ -73,7 +44,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <h3>Et maintenant j'espère trouver une entreprise qui me fasse confiance. Et vous, sauriez-vous me suivre?</h3>
+      <h3>Et vous, sauriez-vous me suivre?</h3>
     </div>
   )
 }

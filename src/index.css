@@ -17,8 +17,15 @@ h1, h2, h3, h4, p, a {
   color: white;
   text-decoration: none;
 }
+
 h2 {
-  font-size: 3rem;
+  font-size: 4rem;
+  content: "";
+  background: rgb(131,58,180);
+  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 h3 {
   font-size: 2rem;
@@ -32,8 +39,9 @@ ul {
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
-  background: rgb(248, 217, 15);
-  color: #222;
+  background: rgb(131,58,180);
+  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  color: #fff;
   border: 1px solid #fff;
   cursor: pointer;
 }
@@ -47,7 +55,7 @@ ul {
   background: transparent;
   color: #fff;
 }
-.project {
+.projects {
   width: 100%;
   padding: 7rem 7rem;
   background: #000;
@@ -91,13 +99,13 @@ ul {
 }
 
 @media screen and (max-width: 1040px) {
-  .project {
+  .projects {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 640px) {
-  .project {
+  .projects {
     grid-template-columns: repeat(1, 1fr);
   }
 }

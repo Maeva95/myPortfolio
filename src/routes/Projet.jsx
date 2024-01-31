@@ -23,8 +23,9 @@ const Projet = () => {
           image={ImgCode}
           heading="MES PROJETS" 
           text="Voici quelques projets réalisés"
+          link="#projects"
           />
-          <ul className='project'>
+          <ul className='projects' id='projects'>
             {data && 
             data.map((work) =>
               <ProjectCard

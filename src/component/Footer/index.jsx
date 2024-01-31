@@ -51,14 +51,14 @@ const Footer = () => {
                     <h4>About me</h4>
                     <p>Je serai ravie de pouvoir discuter de vos nouveaux projets...</p>
                     <FaLinkedin 
-                        size={20} 
+                        size={30} 
                         style={{
                             color: "#fff",
                             marginRight: "2rem"
                         }}
                     />
                     <FaGithub 
-                        size={20} 
+                        size={30} 
                         style={{
                             color: "#fff",
                             marginRight: "2rem"
