@@ -20,17 +20,19 @@
     {
         "id": 2,
         "title": "Portfolio Sophie Bluel",
-        "image": "/assets/mockup-sophie-bluel.png",
+        "image": "/assets/sophie_bluel.png",
         "tools": [
-            "ViteJS",
+            "JavaScript",
             "HTML",
-            "SCSS",
-            "React Router"
+            "CSS",
+            "API Rest",
+            "NodeJS"
         ],
-        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "description": "Conception du portfolio d'une architecte d'intérieur.",
         "objectifs": [
-            "Développer l’ensemble de l’application avec React",
-            "Intégrer les composants React et les routes avec React Router"
+            "Créer une page dynamique en JavaScript from scratch à partir de maquettes Figma",
+            "Développer une page de connexion admin",
+            "Créer une modale pour ajouter, modifier et/ou supprimer des projets"
         ],
         "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
         "source": "https://github.com/Maeva95/Site_Ohmyfood"
@@ -40,71 +42,74 @@
         "title": "Photgraphe Nina Carducci",
         "image": "/assets/mockup-nina-carducci.png",
         "tools": [
-            "ViteJS",
-            "HTML",
-            "SCSS",
-            "React Router"
+            "LightHouse",
+            "Google Analytics",
+            "Wave",
+            "Schema.org"
         ],
-        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "description": "Optimisation globale du portfolio d'une photographe",
         "objectifs": [
-            "Développer l’ensemble de l’application avec React",
-            "Intégrer les composants React et les routes avec React Router"
+            "Auditer le site internet",
+            "Optimiser les performances du site dans sa globalité",
+            "Améliorer son référencement local, pour les réseaux sociaux",
+            "Apporter des corrections e pour le rendre accessible"
         ],
-        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
-        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+        "urlWebsite": "https://maeva95.github.io/Projet-9_Nina-carducci/",
+        "source": "https://github.com/Maeva95/Projet-9_Nina-carducci"
     },
     {
         "id": 4,
-        "title": "Agence immobilière KASA",
-        "image": "/assets/mockup-kasa.png",
+        "title": "site Ohmyfood",
+        "image": "/assets/ohmyfood.png",
         "tools": [
-            "ViteJS",
+            "SASS",
             "HTML",
-            "SCSS",
-            "React Router"
+            "GitHub"
         ],
-        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "description": "Ohmyfood souhaite un site mobile qui répèrtorie les menus des restaurants gastronomiques parisiens",
         "objectifs": [
-            "Développer l’ensemble de l’application avec React",
-            "Intégrer les composants React et les routes avec React Router"
+            "Créer des animations CSS avec SASS (loader, boutons like...)",
+            "Améliorer le site en mobile-first"
         ],
-        "urlWebsite": "https://maeva95.github.io/Projet_8-Agence_immo_web_Kasa/",
-        "source": "https://github.com/Maeva95/Projet_8-Agence_immo_web_Kasa"
+        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/index.html",
+        "source": "https://github.com/Maeva95/Site_Ohmyfood"
     },
     {
         "id": 5,
-        "title": "Portfolio Sophie Bluel",
-        "image": "/assets/mockup-sophie-bluel.png",
+        "title": "Agence évènementielle 724 Events",
+        "image": "/assets/724Events.png",
         "tools": [
-            "ViteJS",
-            "HTML",
-            "SCSS",
-            "React Router"
+            "ReactJS",
+            "React DevTools",
+            "JEST",
+            "SCSS"
         ],
-        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "description": "Le but de ce projet était de débugger la site de l'agence évènementielle",
         "objectifs": [
-            "Développer l’ensemble de l’application avec React",
-            "Intégrer les composants React et les routes avec React Router"
+            "Lister et réparer les bugs en s'appuyant sur React DevTools et JEST",
+            "Rédiger un cahier de recette"
         ],
         "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
         "source": "https://github.com/Maeva95/Site_Ohmyfood"
     },
     {
         "id": 6,
-        "title": "Photgraphe Nina Carducci",
-        "image": "/assets/mockup-nina-carducci.png",
+        "title": "Cabinet Tao Qi Shiatsu",
+        "image": "/assets/taoqishiatsu.png",
         "tools": [
-            "ViteJS",
-            "HTML",
-            "SCSS",
-            "React Router"
+            "WordPress",
+            "Amelia",
+            "RankMath SEO",
+            "Elementor"
         ],
-        "description": "Ce projet portait sur la refonte du site web de l'agence immobilière Kasa",
+        "description": "Création du site internet Tao Qi Shiatsu",
         "objectifs": [
-            "Développer l’ensemble de l’application avec React",
-            "Intégrer les composants React et les routes avec React Router"
+            "Créer le site internet pour présenter l'activité d'un praticien Shiatsu",
+            "Créer son identité visuelle",
+            "Optimiser son référencement SEO",
+            "Rendre le site responsive",
+            "Créer un formulaire de prise de rendez-vous"
         ],
-        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
-        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+        "urlWebsite": "https://taoqishiatsu.fr/"
     }
 ]

@@ -21,15 +21,17 @@ const About = () => {
         <div className='career'>
           <div className='content'>
             <p>
-            Mes expériences professionnelles passées m'ont amenés au fur et à mesure du temps à découvrir le web et le digital, qui s'est fortement imposé dans nos lieux de taravil et nos foyers.
-            Très vite, je me suis liée d'une vrai passion pour le monde du numérique, autant pour son histoire que pour son évolution.
+            Mes expériences professionnelles passées m'ont amené au fur et à mesure du temps à découvrir le web et le digital, qui s'est fortement imposé dans nos lieux de travail et nos foyers.
+            Très vite, je me suis liée d'une vraie passion pour le monde du numérique, autant pour son histoire que pour son évolution.
             Ce qui me plaisait davantage, était de pouvoir créer un site internet avec un peu minimum de créativité et un peu de maîtrise d'outils.
             </p>
             <p>
-            Mon aventure a donc commencé en me formant au web design. Très enrichissant, mais pas suffisant pour moi.
+            Mon aventure a donc commencé en me formant au web design.
+            J'ai donc créé mon premier site sur WordPress pour un client.
+            Ce fût très enrichissant, mais pas suffisant pour moi.
             Je voulais aller plus loin: "Maîtriser le code".
-            Qu'à cela ne tienne, je me suis donc formée au métier de développeur web.
-            Au fur-et-à-mesure de mon apprentissage, j'ai acquis des compétences de développement et les ai mis en pratique créant plusieurs petites applications web dynamiques et responsives plus au moins complexes suivant les contexte.
+            Qu'à cela ne tienne, je me suis donc formé au métier de développeur web.
+            Au cours de mon apprentissage, j'ai acquis des compétences de développement et les ai mis en pratique en créant plusieurs petites applications web dynamiques et responsives plus au moins complexes suivant le contexte.
             </p>
           </div>
         </div>
