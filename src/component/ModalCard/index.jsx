@@ -29,14 +29,14 @@ const ModalCard = ({image, title, detail, objectifs, urlWebsite, source, closeMo
                 <img className='modal-image' src={image} alt={title} />
                 <div className='modal-content'>
                     <div className='work-section'>
-                        <MdBookmarkAdded size={80} style={{color: '#833ab4'}}/>
+                        <MdBookmarkAdded size={50} style={{color: '#833ab4'}}/>
                         <div className='detail'>
                             <h3>Contexte</h3>
                             <p>{detail}</p>
                         </div>
                     </div>
                     <div className='work-section'>
-                        <TbTargetArrow size={80} style={{color: '#fd1d1d'}}/>
+                        <TbTargetArrow size={70} style={{color: '#fd1d1d'}}/>
                         <div className='objective'>
                             <h3>Objectifs</h3>
                             <ul>

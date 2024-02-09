@@ -111,11 +111,11 @@
 }
 .modalContainer .work-links .link-right{
   border-right: 1px solid #000;
-  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  background: #e0d723;
   border-bottom-right-radius: 10px;
 }
 .modalContainer .work-links .link-left{
   border-left: 1px solid #000;
-  background: linear-gradient(52deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 40%, rgba(248,252,69,1) 100%);
+  background: #e0d723;
   border-bottom-left-radius: 10px;
 }

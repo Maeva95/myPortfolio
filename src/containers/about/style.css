@@ -1,0 +1,186 @@
+
+  .about{
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .about::after{
+    content: "Qui suis-je?";
+    color: #e0d6235f;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 200px;
+    position: absolute;
+    top: 5%;
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 49px;
+  }
+  .about p{
+    margin-top: 24px;
+    color: #000;
+  }
+  .about h3{
+    color: #000;
+    z-index: 3;
+  }
+  .about a{
+    margin-top: 10px;
+    color: #000;
+    text-decoration: underline;
+  }
+  .intro-about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin: 0 40px;
+  }
+  .intro-about img{
+    background-color: #fff;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 295px;
+    height: 295px;
+  
+  }
+  
+  .career {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+    margin: 110px 210px;
+    z-index: 1;
+  }
+  .career .content{
+    margin: 0 13px;
+    color: #000;
+  
+  }
+  .career .content p{
+    color: #000;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+  }
+  
+  .skills {
+    display: flex;
+    flex-direction: column;
+    margin: 0 37px;
+  }
+  
+  .skills h3{
+    margin: 55px 0;
+    text-align: center;
+    color: #000;
+  }
+  .skills .content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 82px;
+    column-gap: 52px;
+    margin: 0 90px;
+  }
+  .skills .content h4 {
+    height: 50px;
+    color: #000;
+  }
+  .skills .content p{
+    margin-left: 52px;
+    color: #000;
+  }
+  .skills .content > li {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 57px auto;
+    justify-items: start;
+    align-items: start;
+    color: #000;
+  }
+  .skills-title {
+    display: grid;
+    grid-template-columns: 1fr 270px;
+    gap: 10px;
+    position: relative;
+    z-index: 0;
+  }
+  .skills-title::after{
+    transition: all 0.1s ease-in-out;
+    content: "";
+    position: absolute;
+    top: 14px;
+    z-index: -1;
+    height: 10px;
+    width: 80%;
+    right: -1%;
+  }
+  
+  .skills-title::after{
+    background: #fccc45;
+  }
+  
+  .cv p{
+    margin-top: 10px;
+    color: #000;
+  }
+
+  @media screen and (max-width: 1024px) {
+    .career {
+      margin: 80px 60px;
+    }
+    .about::after {
+        margin: 30px 70px;
+        font-size: 150px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .about::after {
+      margin: 58px 70px;
+      font-size: 100px;
+    }
+    .intro-about img{
+      width: 180px;
+      height: 180px;
+    
+    }
+    .career {
+        margin: 40px;
+    }
+    .skills .content{
+      grid-template-columns: repeat(1, 1fr);
+      margin: 0;
+    }
+    .skills .content > li {
+      width: 356px;
+    }
+  }
+
+  @media screen and (max-width: 425px){
+    .about {
+      padding: 69px 50px
+    }
+    .about::after {
+      margin: 0 50px;
+      font-size: 60px;
+    }
+    .career {
+      margin: 0;
+    }
+    .career .content p{
+      font-size: 1rem;
+    }
+    .skills .content {
+      row-gap: 40px ;
+    }
+    .skills .content p {
+      font-size: 16px;
+      margin-top: 0;
+    }
+    .cv p{
+      font-size: 16px;
+    }
+  }

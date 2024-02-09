@@ -1,0 +1,39 @@
+.contact-form {
+    width: 100%;
+    padding: 2rem 7rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.identity {
+    display: grid;
+    flex-direction: column;
+}
+
+.btn-contact {
+    width: 100%;
+}
+.btn-contact:hover {
+    width: 100%;
+    background: #81818135;
+}
+
+input, .message {
+    width: 100%;
+    border: 1px solid #81818135;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .contact-form {
+        padding: 1rem 4rem;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .contact-form {
+        padding: 1rem 1rem;
+    }
+}

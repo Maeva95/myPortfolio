@@ -32,6 +32,9 @@ export const Navbar = () => {
                 <li onClick={handleClick}>
                     <a href="#about">A propos</a>
                 </li>
+                <li onClick={handleClick}>
+                    <a href="#contact">Contact</a>
+                </li>
             </ul>
             <div className="hamburger" onClick={handleClick}>
                 {click ? (

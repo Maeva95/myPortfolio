@@ -50,20 +50,26 @@ const Footer = () => {
                 <div className='social'>
                     <h4>About me</h4>
                     <p>Je serai ravie de pouvoir discuter de vos nouveaux projets...</p>
-                    <FaLinkedin 
-                        size={30} 
-                        style={{
-                            color: "#fff",
-                            marginRight: "2rem"
-                        }}
-                    />
-                    <FaGithub 
-                        size={30} 
-                        style={{
-                            color: "#fff",
-                            marginRight: "2rem"
-                        }}
-                    />
+                    <div className='social-link'>
+                        <a href="www.linkedin.com/in/maeva-tarati">
+                            <FaLinkedin 
+                                size={30} 
+                                style={{
+                                    color: "#fff",
+                                    marginRight: "2rem"
+                                }}
+                            />
+                        </a>
+                        <a href="https://github.com/Maeva95">
+                            <FaGithub 
+                                size={30} 
+                                style={{
+                                    color: "#fff",
+                                    marginRight: "2rem"
+                                }}
+                            />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

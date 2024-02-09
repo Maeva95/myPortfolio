@@ -27,12 +27,12 @@ export default function ProjectCard ({title, image, description, objectifs, tool
   return (
     <li className='card-container'>
       <img className={click ? 'background-card blur' : 'background-card'}src={image} alt={title} />
-      <div className='card'>
-        <div className='card-heading'>
-          <h3>{title}</h3>
-        </div>
-        <div className='card-footer'>
-            {click ? (
+        {click ? (
+          <div className='card active'>
+            <div className='card-open'>
+              <div className='card-heading'>
+                <h3>{title}</h3>
+              </div>
               <ul className= 'actionBtn'>
                 <li className='tooltip'>
                   <FaList 
@@ -55,7 +55,12 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                   <span className='tooltipText'>GitHub</span>
                 </li>
               </ul>
-            ) : (
+              <FaCirclePlus className='icon-container rotate' size={40} color='#fff' onClick={handleClick}/>
+            </div>
+          </div>
+          ) : (
+          <div className='card'>
+            <div className='card-footer'>
               <ul className='list-tools'>
                 {data && 
                   tools.map((tool, index) => 
@@ -64,31 +69,22 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                     </li>
                 )}
               </ul>
-            )
-          }
-          <svg className={click ? 'icon-container rotate' : 'icon-container'}>
-            <defs>
-              <linearGradient id='myGradient' gradientTransform='rotate(52)'>
-                <stop offset='0%' style={{stopColor: "rgba(131,58,180,1)"}}/>
-                <stop offset='40%' style={{stopColor: "rgba(253,29,29,1)"}}/>
-                <stop offset='100%' style={{stopColor: "rgba(248,252,69,1)"}}/>
-              </linearGradient>
-            </defs>
-            <FaCirclePlus style={{ fill: "url(#myGradient)" }} size={40} onClick={handleClick}/>
-          </svg>
-        </div>
-      </div>
-      { openModal && 
-          <ModalCard
-            title={title}
-            image={image}
-            detail={description}
-            objectifs={objectifs}
-            urlWebsite={urlWebsite}
-            source={source}
-            closeModal={setOpenModal}
-          />
+              <FaCirclePlus className='icon-container' size={40} color='#fff' onClick={handleClick}/>
+            </div>
+          </div>
+          )
         }
+    { openModal && 
+        <ModalCard
+          title={title}
+          image={image}
+          detail={description}
+          objectifs={objectifs}
+          urlWebsite={urlWebsite}
+          source={source}
+          closeModal={setOpenModal}
+        />
+      }
     </li>
   )
 }

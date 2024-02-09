@@ -1,18 +1,14 @@
 .heroImg {
     width: 100%;
-    height: 55vh;
+    height: 68vh;
 }
 .maskImage {
     width: 100%;
     height: 100%;
     position: relative;
-}
-.intoImg {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
+    -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 20%);
+    mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 80%);
+
 }
 
 .maskImage::after {
@@ -25,6 +21,16 @@
     background-color: rgba(0, 0, 0, 0.81);;
     opacity: 0.8;
 }
+
+.intoImg {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+
+
 .heading {
     position: absolute;
     transform: translate(-50%, -50%);
@@ -43,19 +49,21 @@
     text-align: center;
 }
 
-.iconContainer {
-    width: 75px;
-    margin-top: 80px;
-    height: 92px;
-}
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
+    .heroImg {
+        height: 40vh;
+    }
+    
     .heroImg h1 {
         font-size: 2rem;
     }
     
     .heroImg p{
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
+    }
+    .heading {
+        margin-top: 34px
     }
 }
