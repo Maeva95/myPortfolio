@@ -9,11 +9,12 @@
   
   .about::after{
     content: "Qui suis-je?";
-    color: #e0d6235f;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #4d4d4d3a;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: 900;
     font-size: 200px;
     position: absolute;
-    top: 5%;
+    top: 3%;
     margin: 100px;
     display: flex;
     flex-direction: column;
@@ -21,15 +22,13 @@
   }
   .about p{
     margin-top: 24px;
-    color: #000;
   }
-  .about h3{
-    color: #000;
+  .about h2{
+    color: #9f70fd;
     z-index: 3;
   }
   .about a{
     margin-top: 10px;
-    color: #000;
     text-decoration: underline;
   }
   .intro-about {
@@ -40,11 +39,12 @@
     margin: 0 40px;
   }
   .intro-about img{
-    background-color: #fff;
+    background-color: #EEEEEE;
     border-radius: 50%;
     object-fit: cover;
     width: 295px;
     height: 295px;
+    box-shadow: 3px 3px 3px #252a3482;
   
   }
   
@@ -57,12 +57,9 @@
   }
   .career .content{
     margin: 0 13px;
-    color: #000;
   
   }
   .career .content p{
-    color: #000;
-    font-family: 'Comfortaa', sans-serif;
     font-weight: 700;
   }
   
@@ -75,8 +72,15 @@
   .skills h3{
     margin: 55px 0;
     text-align: center;
-    color: #000;
   }
+  .skills h4 {
+    height: 50px;
+    color: #4D4D4D;
+  }
+  .skills p{
+    margin-left: 52px;
+  }
+
   .skills .content{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -84,21 +88,12 @@
     column-gap: 52px;
     margin: 0 90px;
   }
-  .skills .content h4 {
-    height: 50px;
-    color: #000;
-  }
-  .skills .content p{
-    margin-left: 52px;
-    color: #000;
-  }
   .skills .content > li {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 57px auto;
     justify-items: start;
     align-items: start;
-    color: #000;
   }
   .skills-title {
     display: grid;
@@ -113,18 +108,19 @@
     position: absolute;
     top: 14px;
     z-index: -1;
-    height: 10px;
+    height: 7px;
     width: 80%;
     right: -1%;
   }
   
   .skills-title::after{
-    background: #fccc45;
+    background: #FF8911;
   }
   
   .cv p{
     margin-top: 10px;
-    color: #000;
+    font-weight: 700;
+
   }
 
   @media screen and (max-width: 1024px) {
@@ -133,14 +129,15 @@
     }
     .about::after {
         margin: 30px 70px;
-        font-size: 150px;
+        font-size: 100px;
+        top: 7%;
     }
   }
   
   @media screen and (max-width: 768px) {
     .about::after {
       margin: 58px 70px;
-      font-size: 100px;
+      top: 4%;
     }
     .intro-about img{
       width: 180px;
@@ -164,23 +161,38 @@
       padding: 69px 50px
     }
     .about::after {
-      margin: 0 50px;
-      font-size: 60px;
+      margin: 0 42px;
+      font-size: 45px;
+      top: 7%;
     }
     .career {
       margin: 0;
     }
-    .career .content p{
-      font-size: 1rem;
+    .career p{
+      font-size: 0.8rem;
+    }
+    .skills h3 {
+      font-size: 1.4rem;
     }
     .skills .content {
+      margin: 0 10px;
       row-gap: 40px ;
     }
-    .skills .content p {
-      font-size: 16px;
+    .skills p {
+      font-size: 0.8rem;
       margin-top: 0;
     }
+    .skills h4 {
+      font-size: 1rem;
+    }
+    .skills-title {
+      gap: 20px;
+    }
+    .skills-title svg {
+      width: 30px;
+      height: 30px;
+    }
     .cv p{
-      font-size: 16px;
+      font-size: 0.8rem;
     }
   }

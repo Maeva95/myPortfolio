@@ -40,11 +40,17 @@
     z-index: 2;
 }
 
-.heading h1 {
-    font-size: 2.4rem;
+.heading h2 {
+    font-size: 3rem;
+    content: "";
+    background: #9F70FD;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .heading p{
+    color: #EEEEEE;
     font-size: 1.4rem;
     text-align: center;
 }
@@ -55,11 +61,28 @@
         height: 40vh;
     }
     
-    .heroImg h1 {
-        font-size: 2rem;
+    .heroImg h2 {
+        font-size: 2.4rem;
     }
     
-    .heroImg p{
+    .heading p{
+        font-size: 1.4rem;
+        text-align: center;
+    }
+    .heading {
+        margin-top: 34px
+    }
+}
+@media screen and (max-width: 425px) {
+    .heroImg {
+        height: 40vh;
+    }
+    
+    .heroImg h2 {
+        font-size: 1.8rem;
+    }
+    
+    .heading p{
         font-size: 1rem;
         text-align: center;
     }

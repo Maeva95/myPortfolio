@@ -13,54 +13,89 @@ color-tertiary(orange dark): #FF8911
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   scroll-behavior: smooth;
 
 }
 
 body {
-  background: #eaeaea;
+  background: #000;
 }
 
-h1, h2, h3, h4, p, a {
-  color: white;
+p, a {
+  color: #4d4d4d;
   text-decoration: none;
 }
-
+h1, h2, h3, h4 {
+  font-family: 'Comfortaa', sans-serif;
+  color: #4d4d4d;
+}
 h2 {
-  font-size: 4rem;
-  content: "";
-  background: #e0d723;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
 }
 h3 {
   font-size: 2rem;
 }
-
+h4 {
+  font-size: 1.2rem;
+}
 ul {
   list-style-type: none;
 }
 
 .btn {
+  display: block;
   padding: 12px 32px;
   font-size: 1rem;
   text-transform: uppercase;
-  background: #e0d723;
-  color: #fff;
-  border: 1px solid #fff;
+  background: none;
+  color: #EEEEEE;
+  border: 1px solid #EEEEEE;
   cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  font-weight: 600;
+  box-shadow: 3px 3px 3px #252a3482;
 }
-.btn:hover {
-  background: rgb(255, 255, 255, 0.2);
-  color: #fff;
-  transition: 0.3s;
+
+.btn::before {
+  content: "";
+  z-index: -1;
+  width: calc(100% + 90px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: calc(-100% - 90px);
+  background: #7F27FF;
+  clip-path: polygon(0 0, calc(100% - 90px) 0, 100% 100%, 0 100%);
+  transition: transform 0.6s;
+}
+.btn::after{
+  content: "";
+  z-index: -1;
+  width: calc(100% + 90px);
+  height: 100%;
+  top: 0;
+  left: 100%;
+  transform: rotate(180deg);
+  position: absolute;
+  background: #7F27FF;
+  clip-path: polygon(0 0, calc(100% - 90px) 0, 100% 100%, 0 100%);
+  transition: transform 0.6s;
+
+} 
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+.btn:hover::after{
+  transform: rotate(180deg) translateX(100%);
 }
 
 .btn.btn-light {
   background: transparent;
-  color: #fff;
+  color: #EEEEEE;
 }
 .section-about {
   position: relative;
@@ -89,10 +124,13 @@ ul {
     font-size: 1.8rem;
   }
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
   h3 {
     font-size: 1.8rem;
+  }
+  span {
+    font-size: 0.8rem;
   }
 }
 

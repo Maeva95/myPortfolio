@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style.css'
 import IntroImg from '../../assets/images/image-projets.jpg'
 
 const HeroImage = () => {
-  const [click, setClick] = useState(false)
   
 
   return (
@@ -12,10 +11,14 @@ const HeroImage = () => {
             <img className="into-img" src={IntroImg} alt="IntoImg" />
         </div>
         <div className='content'>
-                <p className={ click ? 'typing': ' typing.animate'} onClick={() => {setClick(!click)}}>Bonjour, je suis Maeva, développeuse web</p>
-                <h1>Bienvenue sur mon site web</h1>
-                <a href='#projet' className='btn'>Projets</a>
-                <a href='#about' className='btn btn-light'>A propos</a>
+          <div className='content-text'>
+            <p className='text'>Bonjour, je suis <span className='color-text'> Maëva, </span> développeuse web</p>
+          </div>
+          <h1 className='heading'>Bienvenue sur mon site web</h1>
+          <div className='buttonContainer'>
+            <a href='#about' className='btn btn-light'>A propos</a>
+            <a href='#projet' className='btn btn-dark'>Projets</a>
+          </div>
         </div>
     </div>
   )

@@ -1,10 +1,10 @@
 import React from 'react'
-import HeroImage from '../component/HeroImage'
-import Projet from '../containers/projet'
-import About from '../containers/about'
-import { Navbar } from '../component/Navbar'
-import Footer from '../component/Footer'
-import Contact from '../containers/contact'
+import HeroImage from '../../component/HeroImage'
+import Projet from '../projet'
+import About from '../about'
+import { Navbar } from '../../component/Navbar'
+import Footer from '../../component/Footer'
+import Contact from '../contact'
 
 const Home = () => {
   return (

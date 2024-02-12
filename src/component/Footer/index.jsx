@@ -1,32 +1,19 @@
 import React from 'react'
 import './style.css'
-import { FaGithub, FaHome, FaLinkedin, FaMailBulk, FaPhone } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaMailBulk, FaPhone } from 'react-icons/fa'
 
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className='footer'>
         <div className='footer-container'>
             <div className='left'>
-                <div className='location'>
-                    <FaHome 
-                        size={20} 
-                        style={{
-                            color: "#fff",
-                            marginRight: "2rem"
-                        }}
-                    />
-                    <div>
-                        <p>270 rue du Général Leclerc</p>
-                        <p>95130 Franconville</p>
-                    </div>
-                </div>
                 <div className='phone'>
                     <h4>                    
                         <FaPhone 
                             size={20} 
                             style={{
-                                color: "#fff",
+                                color: "#EEEEEE",
                                 marginRight: "2rem"
                             }}
                         />
@@ -38,7 +25,7 @@ const Footer = () => {
                         <FaMailBulk 
                             size={20} 
                             style={{
-                                color: "#fff",
+                                color: "#EEEEEE",
                                 marginRight: "2rem"
                         }}
                         />
@@ -55,7 +42,7 @@ const Footer = () => {
                             <FaLinkedin 
                                 size={30} 
                                 style={{
-                                    color: "#fff",
+                                    color: "#FF8911",
                                     marginRight: "2rem"
                                 }}
                             />
@@ -64,7 +51,7 @@ const Footer = () => {
                             <FaGithub 
                                 size={30} 
                                 style={{
-                                    color: "#fff",
+                                    color: "#7F27FF",
                                     marginRight: "2rem"
                                 }}
                             />

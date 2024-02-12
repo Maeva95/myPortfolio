@@ -15,7 +15,7 @@ const About = () => {
   return (
     <>
       <div className='about'>
-      <h3>Présentation</h3>
+      <h2>Présentation</h2>
         <div className='career'>
           <div className='intro-about'>
             <img src={Photo} alt="Maeva Tarati" />
@@ -39,31 +39,31 @@ const About = () => {
           </div>
         </div>
         <div className='skills'>
-            <h3>Développement web</h3>
+            <h3>Développement <span style={{color: 'rgb(159, 112, 253'}}> web</span></h3>
             <ul className='content'>
               <li>
-                <div className='skills-title code'>
-                  <FaLaptopCode size={40}/>
+                <div className='skills-title'>
+                  <FaLaptopCode size={38}/>
                   <h4>Langages de programmation</h4>
                 </div>
                 <p>HTML, CSS, JavaScript, TypeScript</p>
               </li>
               <li>
-                <div className='skills-title react'>
-                  <FaReact size={40}/>
+                <div className='skills-title'>
+                  <FaReact size={38}/>
                   <h4>Framework Front-End</h4>
                 </div>
                 <p>React, Angular, Redux</p>
               </li>
               <li>
-                <div className='skills-title css'>
-                  <FaBootstrap size={40}/>
+                <div className='skills-title'>
+                  <FaBootstrap size={38}/>
                   <h4>Framework CSS & Pré-processeur</h4>
                 </div>
                 <p>Bootstrap v5, SASS</p>
               </li>
               <li>
-                <div className='skills-title debug'>
+                <div className='skills-title'>
                   <VscDebug size={38}/>
                   <h4>Optimisation et débug</h4>
                 </div>
@@ -71,17 +71,17 @@ const About = () => {
                 <p>Débuggage (Jest et Jasmine)</p>
               </li>
             </ul>
-            <h3>Web Design</h3>
+            <h3><span style={{color: 'rgb(159, 112, 253'}}>Web </span> Design</h3>
             <ul className='content'>
               <li>
-                <div className='skills-title code'>
+                <div className='skills-title'>
                   <FaPaintbrush size={38}/>
                   <h4>Outils</h4>
                 </div>
                 <p>Adobe Illustrator, Adobe PhotoShop, Adobe Xd, Figma</p>
               </li>
               <li>
-                <div className='skills-title react'>
+                <div className='skills-title'>
                   <FaWordpress size={38}/>
                   <h4>Logiciel & constructeur</h4>
                 </div>

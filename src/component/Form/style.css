@@ -1,6 +1,6 @@
 .contact-form {
     width: 100%;
-    padding: 2rem 7rem;
+    padding: 2rem 12rem;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -12,10 +12,14 @@
 
 .btn-contact {
     width: 100%;
+    color: #7F27FF;
+    border: 1px solid #7F27FF;
 }
 .btn-contact:hover {
     width: 100%;
-    background: #81818135;
+    color: #EEEEEE;
+    border: 1px solid #EEEEEE;
+    background: #7F27FF;
 }
 
 input, .message {

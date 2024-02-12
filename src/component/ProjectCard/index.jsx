@@ -38,7 +38,7 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                   <FaList 
                     className='action-btn active' 
                     size={40} 
-                    onClick={() => {setOpenModal(true)}}
+                    onClick={() => {setOpenModal(true); setClick(!click)}}
                   />
                   <span className='tooltipText'>En savoir plus</span>
                 </li>
@@ -55,7 +55,7 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                   <span className='tooltipText'>GitHub</span>
                 </li>
               </ul>
-              <FaCirclePlus className='icon-container rotate' size={40} color='#fff' onClick={handleClick}/>
+              <FaCirclePlus className='icon-container active' size={30} onClick={handleClick}/>
             </div>
           </div>
           ) : (
@@ -69,7 +69,7 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                     </li>
                 )}
               </ul>
-              <FaCirclePlus className='icon-container' size={40} color='#fff' onClick={handleClick}/>
+              <FaCirclePlus className='icon-container' size={30}  onClick={handleClick}/>
             </div>
           </div>
           )

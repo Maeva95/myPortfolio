@@ -10,6 +10,7 @@
     object-fit: cover;
     filter: blur(0px);
     -webkit-filter: blur(0px);
+    box-shadow: 3px 3px 3px #252a3482;
 }
 .background-card.blur {
     filter: blur(5px);
@@ -26,17 +27,7 @@
     position: absolute;
     top: 0px;
 }
-.card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 10px;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-}
+
 .card.active {
     display: flex;
     flex-direction: column;
@@ -48,9 +39,11 @@
 }
 
 .card h3{
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.6rem;
+    color: #FF8911;
     text-align: center;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 1px #000000;
 }
 
 .card-footer {
@@ -61,7 +54,7 @@
     padding: 15px;
     justify-content: space-between;
     width: 100%;
-    height: 100px;
+    height: 150px;
 }
 .card-open {
     display: grid;
@@ -99,21 +92,30 @@
     font-size: 0.7rem;
     font-weight: 500;
     letter-spacing: 0.5px;
-    box-shadow: 5px 10px 18px #252A34
+    box-shadow: 3px 3px 3px #252a3482;
 }
 
 .icon-container {
+    width: 30px;
+    color: #4d4d4d;
     transform: scale(1);
     transform: rotate(0deg);
     transition-property: all;
-    transition-duration: 0.2s;
+    transition-duration: 0.3s;
     transition-timing-function: cubic-bezier(0,0,.2,1);
 }
 .icon-container:hover {
+    color: #FF8911;
     transform: scale(1.2);
 }
-.icon-container.rotate{
-    transform: rotate(45deg);
+
+.icon-container.active {
+    color: #FF8911;
+    transform: rotate(45deg) ;
+}
+.icon-container.active:hover {
+    transform: rotate(45deg) scale(1.2);
+
 }
 .actionBtn{
     display: flex;
@@ -126,8 +128,8 @@
 .action-btn.active{
     padding: 5px 10px;
     border-radius: 50%;
-    color: #fff;
-    background: #e0d723;
+    color: #EEEEEE;
+    background: #4d4d4d;
     transform: scale(1);
     transition-property: all;
     transition-duration: 0.2s;
@@ -147,22 +149,22 @@
 .tooltip {
     position: relative;
     display: inline-block;
-  }
+}
 .tooltip .tooltipText{
     visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  transition: opacity 0.3s;
+    width: 120px;
+    background-color: #555;
+    color: #EEEEEE;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 3px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
 
 }
 
@@ -182,16 +184,17 @@
     opacity: 1;
   }
 
-  @media screen and (max-width: 1024px){
-    .card-footer {
-        height: 150px;
-    }
-  }
+  
   @media screen and (max-width: 768px) {
     .card-container .background-card {
         height: 384px;
     }
+    .card-container {
+        max-width: 519px;
+    }
   }
   @media screen and (max-width: 425px) {
-    
+    .card-container .background-card {
+        height: 280px;
+    }
   }

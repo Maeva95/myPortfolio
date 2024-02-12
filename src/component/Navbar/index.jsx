@@ -20,27 +20,27 @@ export const Navbar = () => {
     return (
         <header className={color ? "header header-bg" : "header"}>
             <a href="/">
-                <h1>Mon portfolio .</h1>
+                <h1 className={color ? "heading-header color" : "heading-header"}><span>Mon</span> portfolio.</h1>
             </a>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
                 <li onClick={handleClick}>
-                    <a href="#accueil">Accueil</a>
+                    <a href="#accueil" className={color ? "nav-link nav-link-color" : "nav-link"} >Accueil</a>
                 </li>
-                <li onClick={handleClick}>
-                    <a href="#projet">Mes projets</a>
+                <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
+                    <a href="#projet" className={color ? "nav-link nav-link-color" : "nav-link"} >Mes projets</a>
                 </li>
-                <li onClick={handleClick}>
-                    <a href="#about">A propos</a>
+                <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
+                    <a href="#about" className={color ? "nav-link nav-link-color" : "nav-link"} >A propos</a>
                 </li>
-                <li onClick={handleClick}>
-                    <a href="#contact">Contact</a>
+                <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
+                    <a href="#contact" className={color ? "nav-link nav-link-color" : "nav-link"} >Contact</a>
                 </li>
             </ul>
             <div className="hamburger" onClick={handleClick}>
                 {click ? (
-                    <FaTimes size={20} style={{ color: "#fff"}}/>
+                    <FaTimes size={20} style={{ color: "#9F70FD"}}/>
                 ) : (
-                    <FaBars size={20} style={{ color: "#fff"}}/>
+                    <FaBars size={20} style={{ color: "#9F70FD"}}/>
                 )    
             }
             </div>

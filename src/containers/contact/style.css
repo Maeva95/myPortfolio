@@ -8,6 +8,11 @@
     gap: 30px;
 }
 
+@media screen and (max-width: 1024px) {
+    .contact {
+        padding: 2rem 4rem;
+    }
+}
 @media screen and (max-width: 768px) {
     .contact {
         padding: 2rem 2rem;

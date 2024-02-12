@@ -1,33 +1,3 @@
-import { useEffect, useState } from "react";
-
-
-
-export default function FetchData(url) {
-    const [ data, setData ] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-    const [error, setError] = useState(false)
-
-    useEffect(() => {
-        setIsLoading(true)
-        async function fetchDataWork () {
-            try {
-                const res = await fetch(url)
-                const data = res.json()
-                setData(data)
-            } catch (error) {
-                console.log(error)
-                setError(true)
-            } finally {
-                setIsLoading(false)
-            }
-        }
-        fetchDataWork(url)
-    }, [url])
-
-    return {
-        data, isLoading, error
-    }
-}
 
 // SI on utilise le contexte:
 // import  { 

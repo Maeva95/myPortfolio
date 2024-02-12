@@ -19,7 +19,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #000;
+    background-color: #EEEEEE;
     opacity: 0.8;
 }
 .hero {
@@ -33,36 +33,61 @@
     top: 50%;
     left: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.hero .content h1{
-    font-size: 5rem;
+.hero .heading{
+    font-family: 'Montserra', sans-serif;
+    font-size: 4rem;
     padding: 0.6rem 0 1.5rem;
 }
-.hero .content p{
-    font-size: 1.4rem;
+
+.hero .text{
+    font-size: 1.8rem;
     font-weight: 200;
-    text-transform: uppercase;
+}
+.hero .content-text {
+    display: flex;
+}
+.content-text .color-text {
+    font-size: 1.8rem;
+    color: #FF8911;
+}
+.buttonContainer {
+    display: flex;
+}
+.buttonContainer .btn{
+    margin: 1rem 0.2rem;
 }
 
-.content .btn{
-    margin: 1rem 0.2rem;
+.buttonContainer .btn-dark {
+    color: #9F70FD;
+    border: 1px solid #9F70FD;
+}
+.buttonContainer .btn-light {
+    color: #FF8911;
+    border: 1px solid #FF8911;
 }
 
 @media screen and (max-width: 1024px){
     .hero .content {
         width: 70%;
-      }
-      .hero .content .btn {
+    }
+    .hero .content .btn {
         padding: 10px 16px;
         font-size: 14px;
       }
-    .hero .content h1{
+    .hero .heading{
         font-size: 3rem;
     }
-    .hero .content p{
+    .hero .text{
         font-size: 1.6rem;
     }
-    
+    .content-text .color-text {
+        font-size: 1.6rem;
+    }
+
 }
 
 @media screen and (max-width: 425px){
@@ -73,10 +98,15 @@
         padding: 6px 12px;
         font-size: 12px;
     }
-    .hero .content h1{
+    .hero .heading{
         font-size: 1.8rem;
     }
-    .hero .content p{
+    .hero .text {
         font-size: 1.2rem;
     }
+    .content-text .color-text {
+        font-size: 1.2rem;
+    }
+
 }
+

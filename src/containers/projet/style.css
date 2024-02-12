@@ -3,6 +3,7 @@
     padding: 7rem;
     background: #d0d0d0;
     display: grid;
+    justify-items: center;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     z-index: 3
@@ -11,15 +12,13 @@
     .projects {
       grid-template-columns: repeat(2, 1fr);
       padding: 5rem;
-
     }
-    
   }
   
   @media screen and (max-width: 768px) {
     .projects {
       grid-template-columns: repeat(1, 1fr);
-      padding: 7rem 8rem;
+      padding: 7rem 4rem;
     }
   }
 

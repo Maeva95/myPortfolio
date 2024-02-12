@@ -18,7 +18,7 @@ const Form = () => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        alert('Merci pour votre message de  ')
+        alert('Merci pour votre message, je reviendrai vers vous très prochainement')
         emailjs
         .send(
             'service_4shsdu9',
@@ -41,7 +41,7 @@ const Form = () => {
                 <input type="text" id='from_name' name='from_name' value={currentValue.from_name} placeholder='Votre nom' onChange={changeValue} required/>
                 <label htmlFor="mail"></label>
                 <input type="email" id='mail' name='reply_to' placeholder='Votre email' value={currentValue.reply_to} onChange={changeValue} required/>
-                <textarea className='message' rows='7' name='message' placeholder='Votre message' value={currentValue.message} onChange={changeValue} required/>
+                <textarea className='message' rows='7' name='message' placeholder='Votre message' value={currentValue.message} onChange={changeValue}/>
             </div>
             <input type="submit" value="Envoyer" className='btn btn-contact'/>
         </form>

@@ -10,14 +10,23 @@ header {
     z-index: 10;
 }
 
-header h1 {
+.heading-header {
     font-family: 'Comfortaa', sans-serif;
     font-size: 2rem;
     font-weight: 700;
+    color: #4d4d4d;
+}
+.heading-header.color {
+    color: #EEEEEE;
+}
+.heading-header span{
+    font-family: 'Monserrat', sans-serif;
+    color: #9f70fd;
 }
 .header-bg {
     background-color: rgb(0, 0, 0, 0.85);
     transition: 0.5s;
+    box-shadow: 3px 3px 3px #252a3482;
 }
 .nav-menu {
     display: flex;
@@ -25,8 +34,12 @@ header h1 {
 
 .nav-menu li {
     padding: 0 1rem;
+    color: #4d4d4d;
 }
 
+.nav-link-color {
+    color: #EEEEEE;
+}
 .nav-menu li a{
     font-size: 1.2rem;
     font-weight: 500;
@@ -34,7 +47,7 @@ header h1 {
 }
 .nav-menu li a:hover {
     content: "";
-    background: #e0d723;
+    background: #9F70FD;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -66,6 +79,7 @@ header h1 {
     }
     .nav-menu li a{
         font-size: 2rem;
+        color: #EEEEEE;
     }
     
     .hamburger {
@@ -74,7 +88,21 @@ header h1 {
     }
 }
 
+
+@media screen and (max-width: 725px) {
+    .nav-menu li a{
+        font-size: 1.6rem;
+    }
+    
+    .hamburger {
+        display: initial;
+        z-index: -3;
+    }
+}
 @media screen and (max-width: 425px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
     .nav-menu li a {
         font-size: 1.2rem;
     }
