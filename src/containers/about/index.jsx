@@ -1,5 +1,4 @@
-import React from 'react'
-import Photo from '../../assets/images/Photo cv.png'
+import React, { useLayoutEffect, useRef, useState } from 'react'
 import Cv from '../../assets/CV 2024 mis à jour.pdf'
 import {
   FaLaptopCode,
@@ -10,37 +9,43 @@ import {
 } from "react-icons/fa6";
 import { VscDebug } from "react-icons/vsc";
 import './style.css'
+import Career from '../../component/Career';
+
 
 const About = () => {
+  const [show, setShow] = useState({
+    itemOne: false,
+    itemTwo: false
+  });
+
+const firstRef = useRef(null),
+  secondRef = useRef(null);
+
+useLayoutEffect(() => {
+  const topPos = element => element.getBoundingClientRect().top
+  const text1Pos =  topPos(firstRef.current),
+    text2Pos = topPos(secondRef.current);
+
+  const onScroll = () => {
+    const scrollPos = window.scrollY + window.innerHeight
+    if (text1Pos < scrollPos) {
+      setShow(state => ({...state, itemOne: true}))
+    } else if (text2Pos < scrollPos) {
+      setShow(state => ({...state, itemTwo: true}))
+    }
+  }
+  window.addEventListener('scroll', onScroll)
+  return () => window.removeEventListener('scroll', onScroll)
+}, [])
+
   return (
     <>
       <div className='about'>
       <h2>Présentation</h2>
-        <div className='career'>
-          <div className='intro-about'>
-            <img src={Photo} alt="Maeva Tarati" />
-          </div>
-          <div className='content'>
-            <p>
-            Mes expériences professionnelles passées m'ont amenée à découvrir le domaine du numérique et notamment du web. 
-            Je me suis très vite prise de passion pour cet univers, autant par son histoire que par son évolution.
-            </p>
-            <p>
-            Mon aventure a donc commencé en me formant au web design.
-            J'ai donc créé mon premier site internet sur WordPress pour un client.
-            Ce fut très enrichissant, mais pas suffisant pour moi.
-            Je voulais en apprendre davantage: "Maîtriser le code".
-            </p>
-            <p>
-            Au cours de mon apprentissage chez OpenClassrooms, j'ai acquis des compétences de développement. 
-            Mais c'est avant tout en pratiquant et en étant attentif à l'évolution des technologies qu'on se forme et qu'on apprend. 
-            Quelques projets, que je vous laisse découvrir <a href="#projet">ici</a> m'ont permis d'approfondir mes connaissances.
-            </p>
-          </div>
-        </div>
+        <Career />
         <div className='skills'>
             <h3>Développement <span style={{color: 'rgb(159, 112, 253'}}> web</span></h3>
-            <ul className='content'>
+            <ul className={ show.itemTwo ? 'content textL animateL' : 'content textL'} ref={secondRef}>
               <li>
                 <div className='skills-title'>
                   <FaLaptopCode size={38}/>
@@ -72,7 +77,7 @@ const About = () => {
               </li>
             </ul>
             <h3><span style={{color: 'rgb(159, 112, 253'}}>Web </span> Design</h3>
-            <ul className='content'>
+            <ul className={ show.itemOne ? 'content textR animateR' : 'content textR'} ref={firstRef}>
               <li>
                 <div className='skills-title'>
                   <FaPaintbrush size={38}/>

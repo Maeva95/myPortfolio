@@ -14,7 +14,7 @@
             "Développer l’ensemble de l’application avec React",
             "Intégrer les composants React et les routes avec React Router"
         ],
-        "urlWebsite": "https://maeva95.github.io/Projet_8-Agence_immo_web_Kasa/",
+        "urlWebsite": "",
         "source": "https://github.com/Maeva95/Projet_8-Agence_immo_web_Kasa"
     },
     {
@@ -34,8 +34,8 @@
             "Développer une page de connexion admin",
             "Créer une modale pour ajouter, modifier et/ou supprimer des projets"
         ],
-        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
-        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+        "urlWebsite": "",
+        "source": "https://github.com/Maeva95/Projet_6-Portfolio_Sophie_Bluel.git"
     },
     {
         "id": 3,
@@ -89,8 +89,8 @@
             "Lister et réparer les bugs en s'appuyant sur React DevTools et JEST",
             "Rédiger un cahier de recette"
         ],
-        "urlWebsite": "https://maeva95.github.io/Site_Ohmyfood/",
-        "source": "https://github.com/Maeva95/Site_Ohmyfood"
+        "urlWebsite": "",
+        "source": "https://github.com/Maeva95/Debuggez-une-application-React.JS.git"
     },
     {
         "id": 6,

@@ -90,7 +90,7 @@
   color: #000;
   font-size: 0.8rem;
   line-height: 1.6;
-  margin: 5px;
+  margin-bottom: 5px;
 }
 
 .work-section .detail, .work-section .objective{
@@ -125,6 +125,82 @@
 
 @media screen and (max-width: 768px) {
   .modal-content .work-section {
-    gap: 20px;
+    gap: 30px;
+  }
+  .modalContainer {
+    max-width: 379px;
+    gap: 5px;
+  }
+  .modalContainer .modal-image {
+    height: 118px;
+  }
+  .modal-heading {
+    padding: 20px 20px 10px 20px;
+  }
+  .modal-heading h2 {
+    font-size: 1.2rem;
+  }*
+  .modalContainer .modal-content {
+    padding: 0 30px;
+    gap: 12px;
+  }
+  .work-section h3 {
+    font-size: 1rem;
+    margin-bottom: 3px;
+  }
+  .work-section p {
+    font-size: 0.8rem;
+  }
+  .work-section svg {
+    width: 18px;
+    height: 18px;
+  }
+  .work-section .icon-check {
+    width: 10px;
+    height: 10px;
+  }
+  .work-links svg {
+    width: 20px;
+    height: 20px;
+  }
+  .modalContainer .work-links .btn-modal {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 425px) {
+  .modalContainer {
+    max-width: 228px;
+    gap: 5px;
+  }
+  .modal-heading {
+    padding: 15px 15px 10px 15px;
+  }
+  .modal-heading h2 {
+    font-size: 1rem;
+  }*
+  .modalContainer .modal-content {
+    padding: 0 15px;
+  }
+  .modal-content .work-section {
+    gap: 10px;
+  }
+  .work-section h3 {
+    font-size: 0.8rem;
+    margin-bottom: 3px;
+  }
+  .work-section p {
+    font-size: 0.6rem;
+  }
+  .work-section svg {
+    width: 18px;
+    height: 18px;
+  }
+  .work-section .icon-check {
+    width: 10px;
+    height: 10px;
+  }
+  .work-links svg {
+    width: 20px;
+    height: 20px;
   }
 }

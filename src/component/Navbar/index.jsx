@@ -27,10 +27,10 @@ export const Navbar = () => {
                     <a href="#accueil" className={color ? "nav-link nav-link-color" : "nav-link"} >Accueil</a>
                 </li>
                 <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
-                    <a href="#projet" className={color ? "nav-link nav-link-color" : "nav-link"} >Mes projets</a>
+                    <a href="#about" className={color ? "nav-link nav-link-color" : "nav-link"} >A propos</a>
                 </li>
                 <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
-                    <a href="#about" className={color ? "nav-link nav-link-color" : "nav-link"} >A propos</a>
+                    <a href="#projet" className={color ? "nav-link nav-link-color" : "nav-link"} >Mes projets</a>
                 </li>
                 <li className={color ? "nav-link nav-link-color" : "nav-link"} onClick={handleClick}>
                     <a href="#contact" className={color ? "nav-link nav-link-color" : "nav-link"} >Contact</a>

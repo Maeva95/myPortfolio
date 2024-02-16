@@ -22,6 +22,9 @@ footer p {
     font-size: 1.2rem;
     line-height: 30px;
 }
+.footer .left a{
+    color:#EEEEEE
+}
 
 .left {
     height: 100%;

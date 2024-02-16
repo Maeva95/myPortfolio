@@ -11,7 +11,7 @@ export default function ProjectCard ({title, image, description, objectifs, tool
   
   const [click, setClick] = useState(false)
   const handleClick = () => {
-    setClick(!click)
+    setClick(false)
   }
 
   useEffect(() => {
@@ -23,12 +23,19 @@ export default function ProjectCard ({title, image, description, objectifs, tool
     getData()
   }, [])
 
+  const [isHover, setIsHover] = useState(false);
+  const handleMouseEnter = () => {
+    setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+    setIsHover(false);
+  };
 
   return (
     <li className='card-container'>
-      <img className={click ? 'background-card blur' : 'background-card'}src={image} alt={title} />
-        {click ? (
-          <div className='card active'>
+      <img className={isHover ? 'background-card active' : 'background-card'} src={image} alt={title} />
+        {isHover ? (
+          <div className='card active' onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <div className='card-open'>
               <div className='card-heading'>
                 <h3>{title}</h3>
@@ -37,29 +44,29 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                 <li className='tooltip'>
                   <FaList 
                     className='action-btn active' 
-                    size={40} 
+                    size={36} 
                     onClick={() => {setOpenModal(true); setClick(!click)}}
                   />
                   <span className='tooltipText'>En savoir plus</span>
                 </li>
                 <li className='tooltip'>
-                  <a href={urlWebsite}>
-                    <FaGlobe className='action-btn active' size={40} />
+                  <a target="_blank" rel="noopener noreferrer" href={urlWebsite}>
+                    <FaGlobe className='action-btn active' size={36} onClick={handleClick}/>
                   </a>
                   <span className='tooltipText'>Site web</span>
                 </li>
                 <li className='tooltip'>
-                  <a href={source}>
-                    <FaGithub className='action-btn active' size={40} />
+                  <a target="_blank" rel="noopener noreferrer" href={source} >
+                    <FaGithub className='action-btn active' size={36} onClick={handleClick}/>
                   </a>
                   <span className='tooltipText'>GitHub</span>
                 </li>
               </ul>
-              <FaCirclePlus className='icon-container active' size={30} onClick={handleClick}/>
+              <FaCirclePlus className='icon-container active' size={30} onClick={handleMouseLeave}/>
             </div>
           </div>
           ) : (
-          <div className='card'>
+          <div className='card'  onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
             <div className='card-footer'>
               <ul className='list-tools'>
                 {data && 
@@ -74,7 +81,7 @@ export default function ProjectCard ({title, image, description, objectifs, tool
           </div>
           )
         }
-    { openModal && 
+      { openModal && 
         <ModalCard
           title={title}
           image={image}
@@ -88,4 +95,3 @@ export default function ProjectCard ({title, image, description, objectifs, tool
     </li>
   )
 }
-

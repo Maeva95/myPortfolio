@@ -17,7 +17,9 @@ const Footer = () => {
                                 marginRight: "2rem"
                             }}
                         />
+                        <a href="tel:+33695144391">
                         06.95.14.43.91
+                        </a>
                     </h4>
                 </div>
                 <div className='mail'>
@@ -29,7 +31,9 @@ const Footer = () => {
                                 marginRight: "2rem"
                         }}
                         />
-                        maeva.tarati@gmail.com
+                        <a href="mailto:maeva.tarati@gmail.com">
+                            maeva.tarati@gmail.com
+                        </a>
                     </h4>
                 </div>
             </div>
@@ -38,7 +42,7 @@ const Footer = () => {
                     <h4>About me</h4>
                     <p>Je serai ravie de pouvoir discuter de vos nouveaux projets...</p>
                     <div className='social-link'>
-                        <a href="www.linkedin.com/in/maeva-tarati">
+                        <a href="https://www.linkedin.com/in/maeva-tarati" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin 
                                 size={30} 
                                 style={{
@@ -47,7 +51,7 @@ const Footer = () => {
                                 }}
                             />
                         </a>
-                        <a href="https://github.com/Maeva95">
+                        <a href="https://github.com/Maeva95" target="_blank" rel="noopener noreferrer">
                             <FaGithub 
                                 size={30} 
                                 style={{

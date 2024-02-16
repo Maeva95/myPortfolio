@@ -43,12 +43,11 @@ const ModalCard = ({image, title, detail, objectifs, urlWebsite, source, closeMo
                                 {data &&
                                     objectifs.map((detail, index) =>
                                     <li className='detail'>
-                                        <FaCheck key={index} size={15}/>
+                                        <FaCheck className='icon-check' key={index} size={15}/>
                                         <p>
                                             {detail}
                                         </p>
-                                    </li>
-                                    )
+                                    </li>)
                                 }
                             </ul>
                         </div>
@@ -56,12 +55,12 @@ const ModalCard = ({image, title, detail, objectifs, urlWebsite, source, closeMo
                 </div>
                 <ul className='work-links'>
                     <li className='link-left'>
-                        <a href={urlWebsite} className="btn-modal ">
-                        <FaGlobe size={30} style={{color: '#EEEEEE'}}/>
+                        <a target="_blank" rel="noreferrer" href={urlWebsite} className="btn-modal ">
+                            <FaGlobe size={30} style={{color: '#EEEEEE'}}/>
                         </a>
                     </li>
                     <li className='link-right'>
-                        <a href={source} className="btn-modal ">
+                        <a target="_blank" rel="noreferrer" href={source} className="btn-modal ">
                             <FaGithub size={30} style={{color: '#EEEEEE'}}/>
                         </a>
                     </li>
