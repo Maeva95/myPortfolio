@@ -40,7 +40,7 @@ const Footer = () => {
             <div className='right'>
                 <div className='social'>
                     <h4>About me</h4>
-                    <p>Je serai ravie de pouvoir discuter de vos nouveaux projets...</p>
+                    <p>Je serais ravie de pouvoir discuter de vos nouveaux projets...</p>
                     <div className='social-link'>
                         <a href="https://www.linkedin.com/in/maeva-tarati" target="_blank" rel="noopener noreferrer">
                             <FaLinkedin 

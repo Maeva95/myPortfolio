@@ -1,106 +1,41 @@
-import React, { useLayoutEffect, useRef, useState } from 'react'
-import Cv from '../../assets/CV 2024 mis à jour.pdf'
-import {
-  FaLaptopCode,
-  FaReact,
-  FaBootstrap,
-  FaPaintbrush,
-  FaWordpress
-} from "react-icons/fa6";
-import { VscDebug } from "react-icons/vsc";
+import React, { useState } from 'react'
+import Photo from '../../assets/images/Photo cv.png'
+import Cover from '../../assets/images/fond_cv2.webp'
 import './style.css'
 import Career from '../../component/Career';
-
+import Skills from '../../component/Skills';
+import Experiences from '../../component/Experiences';
+import CV from '../../assets/CV_2024.pdf'
 
 const About = () => {
-  const [show, setShow] = useState({
-    itemOne: false,
-    itemTwo: false
-  });
-
-const firstRef = useRef(null),
-  secondRef = useRef(null);
-
-useLayoutEffect(() => {
-  const topPos = element => element.getBoundingClientRect().top
-  const text1Pos =  topPos(firstRef.current),
-    text2Pos = topPos(secondRef.current);
-
-  const onScroll = () => {
-    const scrollPos = window.scrollY + window.innerHeight
-    if (text1Pos < scrollPos) {
-      setShow(state => ({...state, itemOne: true}))
-    } else if (text2Pos < scrollPos) {
-      setShow(state => ({...state, itemTwo: true}))
-    }
-  }
-  window.addEventListener('scroll', onScroll)
-  return () => window.removeEventListener('scroll', onScroll)
-}, [])
+  const [activeIdx, setActiveIdx] = useState(0)
 
   return (
     <>
       <div className='about'>
-      <h2>Présentation</h2>
-        <Career />
-        <div className='skills'>
-            <h3>Développement <span style={{color: 'rgb(159, 112, 253'}}> web</span></h3>
-            <ul className={ show.itemTwo ? 'content textL animateL' : 'content textL'} ref={secondRef}>
-              <li>
-                <div className='skills-title'>
-                  <FaLaptopCode size={38}/>
-                  <h4>Langages de programmation</h4>
-                </div>
-                <p>HTML, CSS, JavaScript, TypeScript</p>
-              </li>
-              <li>
-                <div className='skills-title'>
-                  <FaReact size={38}/>
-                  <h4>Framework Front-End</h4>
-                </div>
-                <p>React, Angular, Redux</p>
-              </li>
-              <li>
-                <div className='skills-title'>
-                  <FaBootstrap size={38}/>
-                  <h4>Framework CSS & Pré-processeur</h4>
-                </div>
-                <p>Bootstrap v5, SASS</p>
-              </li>
-              <li>
-                <div className='skills-title'>
-                  <VscDebug size={38}/>
-                  <h4>Optimisation et débug</h4>
-                </div>
-                <p>Référencement SEO, et optimisation des performances d'un site</p>
-                <p>Débuggage (Jest et Jasmine)</p>
-              </li>
-            </ul>
-            <h3><span style={{color: 'rgb(159, 112, 253'}}>Web </span> Design</h3>
-            <ul className={ show.itemOne ? 'content textR animateR' : 'content textR'} ref={firstRef}>
-              <li>
-                <div className='skills-title'>
-                  <FaPaintbrush size={38}/>
-                  <h4>Outils</h4>
-                </div>
-                <p>Adobe Illustrator, Adobe PhotoShop, Adobe Xd, Figma</p>
-              </li>
-              <li>
-                <div className='skills-title'>
-                  <FaWordpress size={38}/>
-                  <h4>Logiciel & constructeur</h4>
-                </div>
-                <p>WordPress, Elementor</p>
-              </li>
-            </ul>
+        <div className={activeIdx === 0 ? 'about-header' : 'about-header active'}>
+          <img className='about-cover' src={Cover} alt='couverture'/>
+          <img className='about-avatar' src={Photo} alt="Maeva Tarati"/>
+          <h2 className='about-heading'>Maeva Tarati</h2>
+          <p className='about-jobtitle'>Développeuse Front-End</p>
         </div>
-        <div className='cv'>
-          <p>Si vous souhaitez voir mon CV, cliquez <a href={Cv}>ici</a></p>
-          <p>Sinon, retrouvez mes travaux ci-dessous</p>
+        <div className={activeIdx === 0 ?'main-section' : 'main-section active'}>
+          <div className='about-buttons'>
+            <button type='button' onClick={() => setActiveIdx(0)} className='about-btn-footer'>A PROPOS</button>
+            <button type='button' onClick={() => setActiveIdx(1)} className='about-btn-footer'>COMPÉTENCES</button>
+            <button type='button' onClick={() => setActiveIdx(2)} className='about-btn-footer'>ÉXPERIENCES</button>
+            <a href='../../assets/CV_2024.pdf' onClick={() => setActiveIdx(2)} className='about-btn-footer' download={CV} >CV</a>
+          </div>
+          <Career isDisplay={activeIdx === 0}/>
+          <Skills isDisplay={activeIdx === 1}/>
+          <Experiences isDisplay={activeIdx === 2}/>
+          
         </div>
       </div>
     </>
   )
+
+
 }
 
 export default About

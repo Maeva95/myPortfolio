@@ -21,7 +21,9 @@ color-tertiary(orange dark): #FF8911
 body {
   background: #000;
 }
-
+p {
+  font-size: 14px;
+}
 p, a {
   color: #4d4d4d;
   text-decoration: none;
@@ -31,13 +33,16 @@ h1, h2, h3, h4 {
   color: #4d4d4d;
 }
 h2 {
-  font-size: 3rem;
+  font-size: 2.2rem;
 }
 h3 {
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+}
+h5{
+  font-size: 1rem;
 }
 ul {
   list-style-type: none;
@@ -99,24 +104,19 @@ ul {
 }
 .section-about {
   position: relative;
-  padding-top: 192px;
-  background: #eaeaea;
+  background-color: rgb(251 245 238);
+  
 }
 
 
 
 @media screen and (max-width: 1024px) {
-  .section-about {
-    padding-top: 150px;
-  }
 }
 
 
 @media screen and (max-width: 425px) {
   
-  .section-about {
-    padding-top: 100px;
-  }
+  
   p {
     font-size: 0.8rem;
   }
@@ -124,10 +124,16 @@ ul {
     font-size: 1.8rem;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
+  }
+  h4 {
+    font-size: 1.2rem;
+  }
+  h5 {
+    font-size: 1.1rem;
   }
   span {
     font-size: 0.8rem;

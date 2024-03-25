@@ -2,7 +2,7 @@
     {
         "id": 1,
         "title": "Agence immobilière KASA",
-        "image": "/assets/mockup-kasa.png",
+        "image": "/assets/mockup-kasa.webp",
         "tools": [
             "ViteJS",
             "HTML",
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "title": "Portfolio Sophie Bluel",
-        "image": "/assets/sophie_bluel.png",
+        "image": "/assets/mockup-sophie-bluel.webp",
         "tools": [
             "JavaScript",
             "HTML",
@@ -40,7 +40,7 @@
     {
         "id": 3,
         "title": "Photgraphe Nina Carducci",
-        "image": "/assets/mockup-nina-carducci.png",
+        "image": "/assets/mockup-nina-carducci.webp",
         "tools": [
             "LightHouse",
             "Google Analytics",
@@ -60,7 +60,7 @@
     {
         "id": 4,
         "title": "site Ohmyfood",
-        "image": "/assets/ohmyfood.png",
+        "image": "/assets/ohmyfood.webp",
         "tools": [
             "SASS",
             "HTML",
@@ -77,7 +77,7 @@
     {
         "id": 5,
         "title": "Agence évènementielle 724 Events",
-        "image": "/assets/724Events.png",
+        "image": "/assets/724Events.webp",
         "tools": [
             "ReactJS",
             "React DevTools",
@@ -95,7 +95,7 @@
     {
         "id": 6,
         "title": "Cabinet Tao Qi Shiatsu",
-        "image": "/assets/taoqishiatsu.png",
+        "image": "/assets/taoqishiatsu.webp",
         "tools": [
             "WordPress",
             "Amelia",
@@ -111,5 +111,26 @@
             "Créer un formulaire de prise de rendez-vous"
         ],
         "urlWebsite": "https://taoqishiatsu.fr/"
+    },
+    {
+        "id": 7,
+        "title": "Argent Bank",
+        "image": "/assets/argentbank.webp",
+        "tools": [
+            "React",
+            "React Router",
+            "Redux",
+            "Redux Toolkit",
+            "API Rest"
+        ],
+        "description": "Utilisez une API pour un compte utilisateur bancaire avec React et Redux",
+        "objectifs": [
+            "Authentification des utilisateurs",
+            "Mettre en place le state global de l'application avec Redux et la connection de l'utilisateur",
+            "Permettre à l'utilisateur de modifier son nom d'utilisateur via un formulaire",
+            "Proposer une liste de endpoints dans un fichier Swagger pour la gestion des transactions"
+        ],
+        "urlWebsite": "https://maeva95.github.io/ArgentBank-website",
+        "source": "https://github.com/Maeva95/ArgentBank-website"
     }
 ]

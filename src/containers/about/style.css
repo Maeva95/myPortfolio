@@ -1,196 +1,331 @@
-
 .about{
-  padding: 80px 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
+  
 }
 
-.about::after{
-  content: "Qui suis-je?";
-  color: #c3c2c22b;
-  font-family: 'Monserrat', sans-serif;
-  font-weight: 900;
-  font-size: 120px;
-  position: absolute;
-  top: 4%;
-  margin: 100px;
-  display: flex;
-  flex-direction: column;
-  gap: 49px;
-}
 .about p{
   margin-top: 24px;
 }
-.about h2{
-  color: #9f70fd;
-  z-index: 3;
-}
-.about a{
-  margin-top: 10px;
-  text-decoration: underline;
-}
-.intro-about {
+
+.about-header {
+  position: relative;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  margin: 0 40px;
+  height: 410px;
+  flex-shrink: 0;
+  width: 100%;
+  transition: 0.3s;
 }
-.intro-about img{
+.about-header * {
+  transition: 0.3s;
+}
+
+.about-header.active {
+  height: 250px;
+}
+
+.about-cover{
+  height: 380px;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 1);
+  will-change: top;
+  background-size: cover;
+  filter: blur(15px);
+  object-fit: cover;
+  transform: rotate(0deg) scale(1.1);
+  transition: 0.5s;
+  top: 0;
+}
+.about-header.active .about-cover {
+  height: 250px;
+  top: 0px;
+  transform: scale(1);
+}
+
+.about-avatar {
   background-color: #EEEEEE;
   border-radius: 50%;
   object-fit: cover;
-  width: 295px;
-  height: 295px;
-  box-shadow: 3px 3px 3px #252a3482;
-}
-
-
-.skills {
-  display: flex;
-  flex-direction: column;
-  margin: 0 37px;
-
-}
-
-.skills h3{
-  margin: 55px 0;
-  text-align: center;
-}
-
-.skills h4 {
-  height: 50px;
-  color: #4D4D4D;
-}
-.skills p{
-  margin-left: 52px;
-}
-
-.skills .content{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  row-gap: 82px;
-  column-gap: 52px;
-  margin: 0 90px;
-}
-.skills .content > li {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 57px auto;
-  justify-items: start;
-  align-items: start;
-}
-.skills .content.textL {
-  transform: translateX(-100vw);
-  opacity: 0;
-}
-.skills .content.textR {
-  transform: translateX(100vw);
-  opacity: 0;
-}
-
-.skills .content.textL.animateL {
-  opacity: 1;
-  transform: translateX(0);
-  transition: transform 1s;
-}
-.skills .content.textR.animateR {
-  opacity: 1;
-  transform: translateX(0);
-  transition: transform 1s;
-}
-.skills-title {
-  display: grid;
-  grid-template-columns: 1fr 270px;
-  gap: 10px;
-  position: relative;
-  z-index: 0;
-}
-.skills-title::after{
-  transition: all 0.1s ease-in-out;
-  content: "";
+  object-position: center;
   position: absolute;
-  top: 14px;
-  z-index: -1;
-  height: 7px;
-  width: 80%;
-  right: -1%;
+  top: 185px;
+  left: 50%;
+  width: 251px;
+  height: 251px;
+  box-shadow: 3px 3px 3px #252a3482;
+  transform: translateY(-64px) translateX(-50%);
 }
 
-.skills-title::after{
-  background: #FF8911;
+.about-header.active .about-avatar{
+  transform: none;
+  left: 289px;
+  width: 120px;
+  height: 120px;
+  bottom: 0;
+  top: 107px
 }
 
-.cv p{
-  margin-top: 10px;
+.about-heading {
+  position: absolute;
+  top: 416px;
+  font-size: 2rem;
   font-weight: 700;
-
+  text-align: center;
+  white-space: nowrap;
+  transform: translateY(-10px) translateX(-50%);
+  left: 50%;
+  
 }
 
-@media screen and (max-width: 1024px) {
-  .about::after {
-    margin: 30px 70px;
-    font-size: 90px;
-    top: 3%;
+.about-jobtitle {
+  position: absolute;
+  top: 444px;
+  font-size: 18px;
+  white-space: nowrap;
+  font-weight: 500;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0;
+  left: 50%;
+  transform: translateY(-7px) translateX(-50%);
+  color: rgba(255, 137, 17);
+}
+
+.about-header.active .about-heading, .about-header.active .about-jobtitle {
+  left: 437px;
+  transform: none;
+}
+.about-header.active .about-heading {
+  bottom: 0;
+  font-size: 2rem;
+  top: 137px;
+}
+.about-header.active .about-jobtitle {
+  top: 164px;
+  letter-spacing: 1px;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #4d4d4d;
+}
+
+.section-cv {
+  margin-top: 50px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.main-section.active {
+  animation: fadeIn 0.6s both;
+  margin-bottom: 129px;
+  margin-top: 45px;
+}
+.main-section{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  width: 90%;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: start;
+  animation: fadeIn 0.6s both;
+  margin-bottom: 129px;
+  margin-top: 50px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
   }
 }
 
+
+.about-buttons {
+  display: flex;
+  background-color: rgb(251 245 238);
+  position: sticky;
+  top: 0;
+  left: 0;
+  grid-area: 1;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.main-section.active .about-buttons {
+  margin-top: 0;
+}
+.about-btn-footer{
+  flex: 1 1 auto;
+  user-select: none;
+  background: 0;
+  font-size: 13px;
+  border: 0;
+  padding: 15px 5px;
+  cursor: pointer;
+  color: #5c5c6d;
+  transition: 0.3s;
+  font-family: "Jost", sans-serif;
+  font-weight: 500;
+  outline: 0;
+  border-bottom: 3px solid rgb(159, 112, 253);
+  text-decoration: none;
+  text-align: left;
+}
+
+.about-btn-footer:hover{
+  color: #2b2c48;
+  border-bottom: 3px solid hwb(260 44% 1%);
+  background: linear-gradient(
+      to bottom,
+      rgba(127, 199, 231, 0) 0%,
+      rgba(207, 204, 255, 0.2) 44%,
+      rgba(211, 226, 255, 0.4) 100%
+  )
+}
+
+
+@media screen and (max-width: 1024px) {
+}
+
 @media screen and (max-width: 768px) {
-  .about::after {
-    margin: 58px 70px;
-    font-size: 65px;
-    top: 4%;
+  .about {
+    gap: 0;
+  }
+  .about-header {
+    margin-bottom: 20px;
+  }
+  
+  .about-cover {
+    height: 200px;
+  }
+  .about-avatar {
+    width: 200px;
+    height: 200px;
+    top: 161px;
+  }
+  .about-heading {
+    bottom: 50px;
+  }
+  .about-jobtitle {
+    bottom: 22px;
+  }
+  .about-header.active {
+    margin-bottom: 15px;
+    height: 214px;
+  }
+  .about-header.active .about-cover {
+    height: 153px;
+  }
+  .about-header.active .about-avatar {
+    width: 90px;
+    height: 90px;
+    top: 92px;
+    left: 112px;
+  }
+  .about-header.active .about-heading {
+    top: 106px;
+    left: 217px;
+  }
+  .about-header.active .about-jobtitle {
+    top: 128px;
+    left: 217px;
   }
   .intro-about img{
     width: 180px;
     height: 180px;
-  
   }
-  .skills .content{
-    grid-template-columns: repeat(1, 1fr);
-    margin: 0;
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
   }
-  .skills .content > li {
-    width: 356px;
+  .about-buttons {
+    flex-direction: row;
+    margin-bottom: 20px;
+    top: 93px;
+    width: 90%;
+    z-index: 10;
+    margin-top: 0;
+  }
+  .about-btn-footer {
+    text-align: center;
   }
 }
 
 @media screen and (max-width: 425px){
   .about {
-    padding: 69px 50px
+    gap: 0;
   }
-  .about::after {
-    margin: 0 42px;
-    font-size: 45px;
-    top: 7%;
+  .about-header {
+    height: 324px;
   }
-  .skills h3 {
-    font-size: 1.4rem;
+  
+  .about-cover {
+    height: 254px;
   }
-  .skills span {
-    font-size: 1.4rem;
+  .about-avatar {
+    width: 150px;
+    height: 150px;
+    top: 164px;
   }
-  .skills .content {
-    margin: 0 10px;
-    row-gap: 40px ;
+  .about-heading {
+    top: 285px;
+    font-size: 1.8rem;
   }
-  .skills p {
-    font-size: 0.8rem;
-    margin-top: 0;
-  }
-  .skills h4 {
+  .about-jobtitle {
+    top: 305px;
     font-size: 1rem;
   }
-  .skills-title {
-    gap: 20px;
+  .about-header.active {
+    margin-bottom: 15px;
+    height: 214px;
   }
-  .skills-title svg {
-    width: 30px;
-    height: 30px;
+  .about-header.active .about-cover {
+    height: 153px;
   }
-  .cv p{
-    font-size: 0.8rem;
+  .about-header.active .about-avatar {
+    width: 80px;
+    height: 80px;
+    top: 98px;
+    left: 40px;
+  }
+  .about-header.active .about-heading {
+    top: 118px;
+    left: 143px;
+    font-size: 1.2rem;
+  }
+  .about-header.active .about-jobtitle {
+    top: 125px;
+    left: 143px;
+    font-size: 0.9rem;
+  }
+  
+  .intro-about img{
+    width: 180px;
+    height: 180px;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .main-section.active {
+    margin-top: 0;
+  }
+  .about-buttons {
+    flex-direction: row;
+    margin-bottom: 20px;
+    top: 79px;
+    width: 100%;
+    z-index: 10;
   }
 }

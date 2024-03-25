@@ -55,12 +55,14 @@ export default function ProjectCard ({title, image, description, objectifs, tool
                   </a>
                   <span className='tooltipText'>Site web</span>
                 </li>
-                <li className='tooltip'>
-                  <a target="_blank" rel="noopener noreferrer" href={source} >
-                    <FaGithub className='action-btn active' size={36} onClick={handleClick}/>
-                  </a>
-                  <span className='tooltipText'>GitHub</span>
-                </li>
+                {source &&
+                  <li className='tooltip'>
+                    <a target="_blank" rel="noopener noreferrer" href={source} >
+                      <FaGithub className='action-btn active' size={36} onClick={handleClick}/>
+                    </a>
+                    <span className='tooltipText'>GitHub</span>
+                  </li>
+                }
               </ul>
               <FaCirclePlus className='icon-container active' size={30} onClick={handleMouseLeave}/>
             </div>

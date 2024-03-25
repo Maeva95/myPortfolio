@@ -2,52 +2,57 @@
     display: flex;
     flex-direction: column;
     gap: 55px;
-    margin: 110px 210px;
+    margin: 12px 27px;
     z-index: 1;
   }
   .career .content{
-    margin: 0 13px;
+    margin: 0 105px;
+    animation: fadeIn 0.6s both;
   }
-  .career .text{
-    font-weight: 700;
-    
-  }
-  .career .text.animate{
-    opacity: 1;
-    transform: translateX(0);
-    animation-name: animate;
-    animation-duration: 2s;
-  }
-
-  @keyframes animate {
+  @keyframes fadeIn {
     0% {
-        opacity: 0;
-        transform: translateY(-25vw);
-    }
-    50% {
-        opacity: 0;
-        transform: translateY(-10vw);
+      opacity: 0;
+      transform: translatey(40px);
     }
     100% {
-        opacity: 1;
-        transform: translateY(0);
+      opacity: 1;
     }
   }
+  .career .text{
+    font-weight: 400;
+    
+  }
+  .social-links {
+    margin: 0 105px;
+  }
+
   @media screen and (max-width: 1024px) {
     .career {
-      margin: 80px 60px;
+      margin: 50px 0;
+    }
+    .career .content {
+      margin: 0 50px;
+    }
+    .career .social-links {
+      margin: 0 50px;
     }
   }
   
   @media screen and (max-width: 768px) {
     
     .career {
-        margin: 40px;
+      margin: 0 40px;
     }
   }
 
   @media screen and (max-width: 425px){
     .career {
       margin: 0;
+    }
+    .career .content {
+      margin: 0 22px;
+    }
+    .career .social-links {
+      margin: 0 22px;
     }
   }

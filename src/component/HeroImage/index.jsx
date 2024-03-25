@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import IntroImg from '../../assets/images/image-projets.jpg'
+import IntroImg from '../../assets/images/image-projets.webp'
 
 const HeroImage = () => {
   

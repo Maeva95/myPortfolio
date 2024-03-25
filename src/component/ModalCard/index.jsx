@@ -53,17 +53,28 @@ const ModalCard = ({image, title, detail, objectifs, urlWebsite, source, closeMo
                         </div>
                     </div>
                 </div>
-                <ul className='work-links'>
-                    <li className='link-left'>
-                        <a target="_blank" rel="noreferrer" href={urlWebsite} className="btn-modal ">
-                            <FaGlobe size={30} style={{color: '#EEEEEE'}}/>
-                        </a>
-                    </li>
-                    <li className='link-right'>
-                        <a target="_blank" rel="noreferrer" href={source} className="btn-modal ">
-                            <FaGithub size={30} style={{color: '#EEEEEE'}}/>
-                        </a>
-                    </li>
+                <ul className={source ? 'work-links': 'work-links url'}>
+                    {source ? 
+                        (<>
+                            <li className='link-left'>
+                                <a target="_blank" rel="noreferrer" href={urlWebsite} className="btn-modal ">
+                                    <FaGlobe size={30} style={{color: '#EEEEEE'}}/>
+                                </a>
+                            </li>
+                            <li className='link-right'>
+                                <a target="_blank" rel="noreferrer" href={source} className="btn-modal ">
+                                    <FaGithub size={30} style={{color: '#EEEEEE'}}/>
+                                </a>
+                            </li>
+                        </>
+                        ) : (
+                        <li className='link-left url'>
+                            <a target="_blank" rel="noreferrer" href={urlWebsite} className="btn-modal ">
+                                <FaGlobe size={30} style={{color: '#EEEEEE'}}/>
+                            </a>
+                        </li>
+                        )
+                    }
                 </ul>
             </div>
         </div>

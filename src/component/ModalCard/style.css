@@ -102,6 +102,10 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
 }
+
+.modalContainer .work-links.url {
+  grid-template-columns: 1fr;
+}
 .modalContainer .work-links > li {
   padding: 20px;
   text-align: center;
@@ -121,6 +125,10 @@
   border-right: 1px solid #EEEEEE;
   background: #FF8911;
   border-bottom-left-radius: 10px;
+}
+.modalContainer .work-links .link-left.url {
+  border-bottom-right-radius: 10px;
+  border-right: none;
 }
 
 @media screen and (max-width: 768px) {
@@ -169,7 +177,7 @@
 }
 @media screen and (max-width: 425px) {
   .modalContainer {
-    max-width: 228px;
+    max-width: 333px;
     gap: 5px;
   }
   .modal-heading {

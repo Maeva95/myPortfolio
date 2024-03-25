@@ -2,7 +2,7 @@ import React from 'react'
 import Form from '../../component/Form'
 import './style.css'
 import HeroImage2 from '../../component/HeroImg2'
-import WorkImage from '../../assets/images/work-table.jpg'
+import WorkImage from '../../assets/images/work-table.webp'
 
 const Contact = () => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import HeroImage2 from '../../component/HeroImg2'
 import ProjectCard from '../../component/ProjectCard'
-import ImgCode from '../../assets/images/image-hero.jpg'
+import ImgCode from '../../assets/images/image-hero.webp'
 import './style.css'
 
 const Projet = () => {
