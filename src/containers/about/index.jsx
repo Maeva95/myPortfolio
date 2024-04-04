@@ -16,9 +16,12 @@ const About = () => {
         <div className={activeIdx === 0 ? 'about-header' : 'about-header active'}>
           <img className='about-cover' src={Cover} alt='couverture'/>
           <img className='about-avatar' src={Photo} alt="Maeva Tarati"/>
+        </div>
+        <div className={activeIdx === 0 ? 'about-title' : 'about-title active'}>
           <h2 className='about-heading'>Maeva Tarati</h2>
           <p className='about-jobtitle'>Développeuse Front-End</p>
         </div>
+
         <div className={activeIdx === 0 ?'main-section' : 'main-section active'}>
           <div className='about-buttons'>
             <button type='button' onClick={() => setActiveIdx(0)} className='about-btn-footer'>A PROPOS</button>

@@ -52,12 +52,21 @@ footer p {
 
 
 @media screen and (max-width: 768px) {
+    .footer {
+        padding: 1rem 2rem;
+    }
     .footer-container {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
-}
-@media screen and (max-width: 425px) {
     .footer p, .footer h4 {
         font-size: 1rem;
     }
+}
+@media screen and (max-width: 425px) {
+    
+    .footer p, .footer h4 {
+        font-size: 0.8rem;
+    }
+
 }

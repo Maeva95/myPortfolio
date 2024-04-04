@@ -13,17 +13,21 @@
 .about-header {
   position: relative;
   display: flex;
-  height: 410px;
+  height: 440px;
   flex-shrink: 0;
   width: 100%;
   transition: 0.3s;
+  overflow: hidden;
 }
 .about-header * {
-  transition: 0.3s;
+  transition: all 0.3s ease-in-out;
+}
+.about-title * {
+  transition: all 0.3s ease-in-out;
 }
 
 .about-header.active {
-  height: 250px;
+  height: 320px;
 }
 
 .about-cover{
@@ -35,12 +39,12 @@
   background-size: cover;
   filter: blur(15px);
   object-fit: cover;
-  transform: rotate(0deg) scale(1.1);
-  transition: 0.5s;
+  transform: scale(1.1);
+  transition: 0.3s;
   top: 0;
 }
 .about-header.active .about-cover {
-  height: 250px;
+  height: 270px;
   top: 0px;
   transform: scale(1);
 }
@@ -67,47 +71,50 @@
   bottom: 0;
   top: 107px
 }
+.about-title {
+  position: absolute;
+  top: -10px;
+  left: 40%;
+  transform: translate(0px, 450px);
+  transition: all .3s ease-in-out;
+}
+
+.about-title.active {
+  left: 30%;
+  transform: none;
+  top: 130px;
+}
 
 .about-heading {
-  position: absolute;
-  top: 416px;
   font-size: 2rem;
   font-weight: 700;
   text-align: center;
   white-space: nowrap;
-  transform: translateY(-10px) translateX(-50%);
-  left: 50%;
-  
 }
 
 .about-jobtitle {
-  position: absolute;
-  top: 444px;
   font-size: 18px;
   white-space: nowrap;
   font-weight: 500;
-  opacity: 0.7;
   text-transform: uppercase;
   letter-spacing: 1.5px;
   margin: 0;
-  left: 50%;
-  transform: translateY(-7px) translateX(-50%);
   color: rgba(255, 137, 17);
 }
 
-.about-header.active .about-heading, .about-header.active .about-jobtitle {
-  left: 437px;
-  transform: none;
+.about-title.active .about-heading, .about-title.active .about-jobtitle {
+  
+  text-align: start;
 }
-.about-header.active .about-heading {
+.about-title.active .about-heading {
   bottom: 0;
-  font-size: 2rem;
+  font-size: 1.8rem;
   top: 137px;
 }
-.about-header.active .about-jobtitle {
-  top: 164px;
+.about-title.active .about-jobtitle {
   letter-spacing: 1px;
   font-size: 14px;
+  font-weight: 600;
   margin-top: 20px;
   color: #4d4d4d;
 }
@@ -155,6 +162,7 @@
   grid-area: 1;
   flex-direction: column;
   margin-top: 50px;
+  width: 120px;
 }
 
 .main-section.active .about-buttons {
@@ -191,6 +199,15 @@
 
 
 @media screen and (max-width: 1024px) {
+  .about {
+    gap: 5px;
+  }
+  .about-title {
+    left: 35%;
+  }
+  .about-title.active {
+    left: 43%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -199,42 +216,51 @@
   }
   .about-header {
     margin-bottom: 20px;
+    height: 380px;
   }
   
   .about-cover {
-    height: 200px;
+    height: 300px;
   }
   .about-avatar {
-    width: 200px;
-    height: 200px;
-    top: 161px;
-  }
-  .about-heading {
-    bottom: 50px;
-  }
-  .about-jobtitle {
-    bottom: 22px;
+    width: 180px;
+    height: 180px;
+    top: 172px;
   }
   .about-header.active {
     margin-bottom: 15px;
-    height: 214px;
+    height: 260px;
   }
   .about-header.active .about-cover {
-    height: 153px;
+    height: 220px;
   }
   .about-header.active .about-avatar {
     width: 90px;
     height: 90px;
-    top: 92px;
+    top: 110px;
     left: 112px;
   }
-  .about-header.active .about-heading {
-    top: 106px;
-    left: 217px;
+  .about-title {
+    left: 32%;
+    top: -100px;
   }
-  .about-header.active .about-jobtitle {
-    top: 128px;
-    left: 217px;
+  .about-heading {
+    font-size: 1.8rem;
+  }
+  .about-jobtitle {
+    font-size: 1rem;
+  }
+
+  .about-title.active {
+    left: 30%;
+    top: 132px;
+  }
+  .about-title.active .about-heading {
+    font-size: 1.2rem;
+  }
+  .about-title.active .about-jobtitle {
+    font-size: 0.8rem;
+    margin-top: 18px;
   }
   .intro-about img{
     width: 180px;
@@ -250,7 +276,7 @@
   .about-buttons {
     flex-direction: row;
     margin-bottom: 20px;
-    top: 93px;
+    top: 90px;
     width: 90%;
     z-index: 10;
     margin-top: 0;
@@ -264,6 +290,9 @@
   .about {
     gap: 0;
   }
+  .about p {
+    margin-top: 18px;
+  }
   .about-header {
     height: 324px;
   }
@@ -276,20 +305,12 @@
     height: 150px;
     top: 164px;
   }
-  .about-heading {
-    top: 285px;
-    font-size: 1.8rem;
-  }
-  .about-jobtitle {
-    top: 305px;
-    font-size: 1rem;
-  }
   .about-header.active {
     margin-bottom: 15px;
     height: 214px;
   }
   .about-header.active .about-cover {
-    height: 153px;
+    height: 180px;
   }
   .about-header.active .about-avatar {
     width: 80px;
@@ -297,15 +318,27 @@
     top: 98px;
     left: 40px;
   }
-  .about-header.active .about-heading {
+  .about-title {
+    top: -158px;
+    left: 25%;
+  }
+  .about-heading {
+    font-size: 1.4rem;
+  }
+  .about-jobtitle {
+    font-size: 0.8rem;
+  }
+
+  .about-title.active {
     top: 118px;
-    left: 143px;
+    left: 32%;
+  }
+  .about-title.active .about-heading {
     font-size: 1.2rem;
   }
-  .about-header.active .about-jobtitle {
-    top: 125px;
-    left: 143px;
-    font-size: 0.9rem;
+  .about-title.active .about-jobtitle {
+    font-size: 0.6rem;
+    margin-top: 14px;
   }
   
   .intro-about img{
@@ -327,5 +360,8 @@
     top: 79px;
     width: 100%;
     z-index: 10;
+  }
+  .about-btn-footer {
+    font-size: 12px;
   }
 }
